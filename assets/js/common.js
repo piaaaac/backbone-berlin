@@ -91,9 +91,15 @@ function gotoBubble (bubbleId) {
   var transformBbbg = "translateX("+ -bbbgx +"px)";
   $(".bbbg").css("transform", transformBbbg);
 
-  // --- desktop transform x line
+  // --- transform x line (desktop & mobile)
 
-  var linex = $(linkDesktop).offset().left - 5;
+  var linex = 0;
+  if (breakpointIs("md", "up")) {
+    linex = $(linkDesktop).offset().left - 5;
+  } else {
+    var maxBubblex = bubbles.map(e => e.x).reduce((a, b) => { return Math.max(a, b) });
+    linex = apMap(bubblex, 0,maxBubblex, 7.5,window.innerWidth-7.5);
+  }
   var transformLine = "translateX("+ linex +"px)";
   $(".line").css("transform", transformLine);
 

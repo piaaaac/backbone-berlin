@@ -29,8 +29,8 @@ $landingBubbleId = Str::slug(page("landing")->id());
     <?php endforeach ?>
     <a href="#" class="menu-item no-u">De</a>
   </div>
-  <a class="arrow" id="arrow-left" data-bubble-id=""><</a>
-  <a class="arrow" id="arrow-right" data-bubble-id="">></a>
+  <a class="arrow" id="arrow-left" data-bubble-id=""></a>
+  <a class="arrow" id="arrow-right" data-bubble-id=""></a>
 </nav>
 
 <script>

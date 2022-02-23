@@ -146,7 +146,7 @@ input:invalid, textarea:invalid {
 
 .font-sans-m {
   font-family: Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: 1.2em;
   font-weight: 400;
@@ -154,7 +154,7 @@ input:invalid, textarea:invalid {
   font-stretch: normal; }
   @media (min-width: 576px) {
     .font-sans-m {
-      font-size: 15px; } }
+      font-size: 16px; } }
   @media (min-width: 768px) {
     .font-sans-m {
       font-size: 18px; } }
@@ -167,7 +167,7 @@ input:invalid, textarea:invalid {
 
 p {
   font-family: Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: 1.2em;
   font-weight: 400;
@@ -176,7 +176,7 @@ p {
   margin-bottom: 1em; }
   @media (min-width: 576px) {
     p {
-      font-size: 15px; } }
+      font-size: 16px; } }
   @media (min-width: 768px) {
     p {
       font-size: 18px; } }
@@ -212,7 +212,7 @@ h1 {
 
 h2 {
   font-family: Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: 1.2em;
   font-weight: 400;
@@ -220,7 +220,7 @@ h2 {
   font-stretch: normal; }
   @media (min-width: 576px) {
     h2 {
-      font-size: 15px; } }
+      font-size: 16px; } }
   @media (min-width: 768px) {
     h2 {
       font-size: 18px; } }
@@ -233,7 +233,7 @@ h2 {
 
 h3 {
   font-family: Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: 1.2em;
   font-weight: 400;
@@ -241,7 +241,7 @@ h3 {
   font-stretch: normal; }
   @media (min-width: 576px) {
     h3 {
-      font-size: 15px; } }
+      font-size: 16px; } }
   @media (min-width: 768px) {
     h3 {
       font-size: 18px; } }
@@ -254,7 +254,7 @@ h3 {
 
 h4 {
   font-family: Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: 1.2em;
   font-weight: 400;
@@ -262,7 +262,7 @@ h4 {
   font-stretch: normal; }
   @media (min-width: 576px) {
     h4 {
-      font-size: 15px; } }
+      font-size: 16px; } }
   @media (min-width: 768px) {
     h4 {
       font-size: 18px; } }
@@ -275,7 +275,7 @@ h4 {
 
 h5 {
   font-family: Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: 1.2em;
   font-weight: 400;
@@ -283,7 +283,7 @@ h5 {
   font-stretch: normal; }
   @media (min-width: 576px) {
     h5 {
-      font-size: 15px; } }
+      font-size: 16px; } }
   @media (min-width: 768px) {
     h5 {
       font-size: 18px; } }
@@ -296,7 +296,7 @@ h5 {
 
 h6 {
   font-family: Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: 1.2em;
   font-weight: 400;
@@ -304,7 +304,7 @@ h6 {
   font-stretch: normal; }
   @media (min-width: 576px) {
     h6 {
-      font-size: 15px; } }
+      font-size: 16px; } }
   @media (min-width: 768px) {
     h6 {
       font-size: 18px; } }
@@ -549,7 +549,7 @@ body {
   width: 100vw;
   color: black;
   font-family: Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: 1.2em;
   font-weight: 400;
@@ -557,7 +557,7 @@ body {
   font-stretch: normal; }
   @media (min-width: 576px) {
     body {
-      font-size: 15px; } }
+      font-size: 16px; } }
   @media (min-width: 768px) {
     body {
       font-size: 18px; } }
@@ -574,10 +574,8 @@ hr {
   border-top: 1px solid rgba(255, 255, 255, 0.3); }
 
 a {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 10%;
-  color: blue; }
+  color: blue;
+  text-decoration: none; }
 
 .anchor {
   position: relative;
@@ -763,19 +761,25 @@ nav#menu-mobile {
   nav#menu-mobile .arrow {
     position: absolute;
     top: 0;
-    background-color: yellow;
     height: 36px;
-    width: 36px;
+    width: 46.8px;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    padding-top: 3px; }
+    nav#menu-mobile .arrow:active {
+      opacity: 0.5; }
     nav#menu-mobile .arrow[data-bubble-id=''] {
       opacity: 0.3;
       pointer-events: none; }
     nav#menu-mobile .arrow#arrow-left {
       left: 0; }
+      nav#menu-mobile .arrow#arrow-left::after {
+        content: url("../images/arrow-l.svg"); }
     nav#menu-mobile .arrow#arrow-right {
       right: 0; }
+      nav#menu-mobile .arrow#arrow-right::after {
+        content: url("../images/arrow-r.svg"); }
   nav#menu-mobile.open .items {
     top: 0 !important; }
     nav#menu-mobile.open .items a.menu-item {
