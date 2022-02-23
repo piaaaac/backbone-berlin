@@ -1,0 +1,17 @@
+Title: Archive
+
+----
+
+Bubbletitle: 
+
+----
+
+Sectionitems:
+
+- 
+  sectionname: ""
+  sectiontext: |
+    # (link: archive target: _blank text: 2020 Lorem ipsum)
+    # (link: archive target: _blank text: 2020 Vestibulum sit amet pellentesque nibh)
+    # (link: archive target: _blank text: 2020 Nulla efficitur)
+    # (link: archive target: _blank text: 2020 Mauris sed turpis)

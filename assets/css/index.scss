@@ -1,0 +1,313 @@
+@charset "UTF-8";
+
+// -----------------------------------------------------------------------------
+// Variables
+// -----------------------------------------------------------------------------
+
+$button-h: 47px;
+$button-h-s: 37px;
+$menu-h: 50px;
+$border-radius: 3px;
+$space: 15px;
+
+
+// -----------------------------------------------------------------------------
+// External files import
+// -----------------------------------------------------------------------------
+
+@import 'bootstrap-scss/_functions';
+@import 'bootstrap-scss/_variables';
+@import 'bootstrap-scss/mixins/_breakpoints';
+@import '_reset';
+@import '_typography';
+@import '_mixins';
+@import '_switch';
+@import 'hamburger-settings';
+@import 'hamburgers/hamburgers';
+
+// -----------------------------------------------------------------------------
+// Utilities
+// -----------------------------------------------------------------------------
+
+.color-white { color: white; }
+.color-white-50 { color: rgba(white, 0.5); }
+.bg-white { background-color: white; }
+.no-u { text-decoration: none; }
+.u-hover { text-decoration: none; &:hover { text-decoration: underline; } }
+.pointer { cursor: pointer; }
+.upper { text-transform: uppercase; }
+.lower { text-transform: none; }
+
+.space-1 { height: #{$space * 1}; }
+.space-2 { height: #{$space * 2}; }
+.space-3 { height: #{$space * 3}; }
+.space-4 { height: #{$space * 4}; }
+.space-6 { height: #{$space * 6}; }
+.space-8 { height: #{$space * 8}; }
+
+// -----------------------------------------------------------------------------
+// General tags & classes
+// -----------------------------------------------------------------------------
+
+* {
+  text-rendering: geometricPrecision; // OK on chrome
+}
+
+// html {
+//   scroll-behavior: smooth;
+// }
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  // background-color: grey;
+  color: black;
+  @include font-sans-m;
+  &.media-open { overflow: hidden; }
+}
+
+main {}
+
+hr {
+  border-top: 1px solid rgba(white, 0.3);
+}
+
+a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 10%;
+  color: blue;
+}
+
+// -----------------------------------------------------------------------------
+// REUSABLE PIECES
+// -----------------------------------------------------------------------------
+
+.button {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: $button-h;
+  border: 1px solid grey;
+  color: grey;
+  @include font-sans-m;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: $border-radius;
+  padding: 0 $space;
+  transition: background-color 400ms, color 400ms;
+  &:hover, &.active {
+    background-color: grey;
+    color: grey;
+  }
+  &.small {
+    height: $button-h-s;
+    width: auto; padding: 0 10px;
+    text-transform: none;
+  }
+}
+
+.anchor {
+  position: relative;
+  top: -80px;
+  height: 0px; width: 10px;
+}
+
+@keyframes blink {
+  0%  { opacity: 0.5; }
+  25% { opacity: 0.5; }
+  50% { opacity: 0.3; }
+  75% { opacity: 0.5; }
+  100%{ opacity: 0.5; }
+}
+
+// -----------------------------------------------------------------------------
+// STRUCTURE
+// -----------------------------------------------------------------------------
+
+.bbbg-wrap {
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  overflow: hidden;
+  .bbbg {
+    position: absolute;
+    top: 0; left: 12vw; height: 100%; margin-right: 12vw;
+    transition: transform 1200ms;
+  }
+}
+
+.line {
+  z-index: 2000;
+  position: fixed; left: 0px; top: 0; bottom: 0; width: 1px;
+  background-color: blue;
+  transition: transform 800ms;
+  transform: translateX(10px);
+  transform: translateX(50vw);
+}
+
+.screen {
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0;
+  overflow: hidden;
+  display: flex; align-items: center; justify-content: flex-start; flex-wrap: nowrap;
+  .bubbles {
+    // background-color: green;
+    display: flex; align-items: center; justify-content: flex-start;
+    transition: transform 1000ms;
+    .bubble-wrapper {
+      // border: 1px solid blue;
+      display: flex; align-items: center; justify-content: center;
+      &[data-level='1'] { width: 100vw; }
+      &[data-level='2'] { }
+      .bubble {
+
+        scroll-behavior: smooth;
+
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 2px;
+        width: 720px;
+        max-height: 80vh;
+        overflow-y: scroll;
+        position: relative;
+        .submenu {
+          position: sticky;
+          top: 0; left: 0; width: 100%;
+          background-color: white;
+          padding: $space;
+          margin-bottom: #{$space * 2};
+        }
+        .text {
+          text-align: justify;
+          padding-right: $space;
+          padding-left: $space;
+          &:first-child { padding-top: $space; }
+          &:last-child { padding-bottom: $space; }
+          p { padding-left: 60px; }
+        }
+        .bubble-title {
+          margin-bottom: -10px;
+          position: relative;
+          z-index: 2;
+        }
+      }
+      &.hide {
+        opacity: 0; 
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// SPECIFIC
+// -----------------------------------------------------------------------------
+
+nav#menu-header {
+  z-index: 6;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  transition: background-color 400ms, padding 400ms;
+  padding: 0 $space;
+  // background-color: grey; 
+  a { color: black;}
+  .wrapper {
+    height: $menu-h;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  a.menu-item {
+    // border: 1px solid green;
+    flex-grow: 1;
+    text-decoration: none;
+    @include font-sans-m;
+    &.active, &:hover {
+      // text-decoration: underline;
+      color: blue;
+    }
+  }
+
+  a#header-low-a {
+    margin-right: 3px;
+    &:hover {
+      color: grey;
+      text-decoration: none;
+    }
+  }
+}
+#menu-xs {
+  z-index: 5;
+  position: fixed;
+  top: 0; right: -100%;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: grey;
+  padding: $menu-h 0;
+  @include transition(right 400ms);
+  @at-root body.menu-xs-open & {
+    right: 0;
+  }
+  display: flex; flex-flow: column nowrap; justify-content: center; align-items: stretch;
+
+  a.item {
+    // color: white;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    @include font-sans-xl;
+    // text-transform: uppercase;
+    &.small {
+      @include font-sans-m;
+    }
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  padding: 0 $space;
+  height: $menu-h;
+  display: flex; align-items: center; justify-content: flex-start;
+  .content-wrapper {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    .content {
+      position: relative;
+      left: 0;
+      // transition: [left - transform] 2000ms ease-in-out; // done via js
+      &, * {
+        display: inline-block;
+      }
+    } 
+  }
+}
+
+// ------------------------------------------------------------------------
+// Layout
+// ------------------------------------------------------------------------
+
+.container-fluid {
+  max-width: 940px; 
+  max-width: 1100px; 
+  margin-left: auto; margin-right: auto;
+  padding-left: 30px; padding-right: 30px;
+  @include media-breakpoint-down(xs) {
+    padding-left: 15px; padding-right: 15px;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// BOOTSTRAP BREAKPOINTS
+// -----------------------------------------------------------------------------
+
+// xs ---                 Portrait phones
+// sm ---  576px and up   Small devices (landscape phones)
+// md ---  768px and up   Medium devices (tablets)
+// lg ---  992px and up   Large devices (desktops)
+// xl --- 1200px and up   Extra large devices (large desktops)
+
+// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+// @include media-breakpoint-up(sm) { ... }
+// @include media-breakpoint-only(md) { ... }
+// @include media-breakpoint-between(md, xl) { ... }
+// @include media-breakpoint-down(lg) { ... }

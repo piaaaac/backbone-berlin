@@ -1,0 +1,56 @@
+Title: Backbone Berlin
+
+----
+
+Menuitems:
+
+- 
+  menupage:
+    - intro
+  menutext: Intro
+- 
+  menupage:
+    - sessions-21
+  menutext: Sessions 21
+- 
+  menupage:
+    - projects
+  menutext: Projects
+- 
+  menupage:
+    - calendar
+  menutext: Calendar
+- 
+  menupage:
+    - archive
+  menutext: Archive
+- 
+  menupage:
+    - info
+  menutext: Info
+
+----
+
+Footertext: **Next meeting** 14/15/16 March 2022 @ Lorem ipsum dolor sit - Am Wriezener bhf, 10243 Berlin, Germany
+
+----
+
+Socialdescription: 
+
+----
+
+Socialimage:
+
+- copy.png
+
+----
+
+Bgimages:
+
+- bbbg1.svg
+- bbbg2.svg
+- bbbg3.svg
+
+----
+
+Fallbackimage: 

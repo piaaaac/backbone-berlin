@@ -1,0 +1,55 @@
+title: Site
+unlisted: true
+
+columns:
+  - 1/1:
+    sections:
+
+      pages:
+        type: pages
+
+      meta:
+        type: fields
+        fields:
+
+          menuItems:
+            type: structure
+            label: Menu items
+            fields:
+              menuPage:
+                width: 1/2
+                type: pages
+                min: 1
+                max: 1
+                # translate: false
+              menuText:
+                width: 1/2
+                type: text
+
+          footerText:
+            type: text
+          
+          socialDescription:
+            type: textarea
+            width: 1/2
+          
+          socialImage:
+            type: files
+            min: 1
+            max: 1
+            help: "Un'immagine di 1200x630 px"
+            width: 1/2
+            translate: false
+
+          # cookieBanner:
+          #   label: Cookie banner text
+          #   type: textarea
+          #   width: 1/2
+          
+          bgImages:
+            type: files
+            min: 1
+            # max: 1
+            # width: 1/2
+            translate: false
+

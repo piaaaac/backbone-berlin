@@ -1,0 +1,17 @@
+Title: Intro
+
+----
+
+Bubbletitle: 
+
+----
+
+Sectionitems:
+
+- 
+  sectionname: ""
+  sectiontext: '# *Backbone* is a Berlin based group that promotes activities of research, co-creation and activism ✊🏼 around the implications of working as a performative artist today.'
+
+----
+
+Text: 
