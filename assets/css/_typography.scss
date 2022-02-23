@@ -25,8 +25,8 @@ $font-sans: Arial, sans-serif;
 
 // ----------------------------------------------------------- xs --- sm --- md --- lg --- xl ---- lsp ---- lh ---- w --- style
 
-@mixin font-sans-xl {  @include font-style($font-sans,         46px,  46px,  46px,  46px,  46px,   0,       1.05em, 400,  normal); }
-@mixin font-sans-m {   @include font-style($font-sans,         18px,  18px,  18px,  18px,  18px,   0,       1.2em,  400,  normal); }
+@mixin font-sans-xl {  @include font-style($font-sans,         36px,  36px,  46px,  46px,  46px,   0,       1.05em, 400,  normal); }
+@mixin font-sans-m {   @include font-style($font-sans,         15px,  15px,  18px,  18px,  18px,   0,       1.2em,  400,  normal); }
 
 .font-sans-xl  { @include font-sans-xl; }
 .font-sans-m   { @include font-sans-m; }

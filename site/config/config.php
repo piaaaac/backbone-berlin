@@ -3,6 +3,10 @@
 return [
 
   
+  // --- Custom
+
+  "menu-mobile-h" => 36,
+
   // --- Kirby
 
   "debug" => true,

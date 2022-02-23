@@ -3,6 +3,7 @@
 // EXECUTION
 // ---------------------------------------------------------------------------
 
+var menuMobileH = window.menuMobileH; // initialized by php in header.php
 var bubbles = initBubbles();
 var state = {
   currentBubbleId: "landing",
@@ -11,6 +12,8 @@ var footerCount;
 var footerInterval;
 
 setFooterAnimation();
+showTime();
+
 
 // --- check and assign hash, then go
 
@@ -29,11 +32,14 @@ window.addEventListener("resize", function (event) {
   setFooterAnimation();
 });
 
-
-$("nav .menu-item[data-bubble-id]").click(function () {
+$("nav .menu-item[data-bubble-id], nav#menu-mobile .arrow").click(function () {
   var bubbleId = this.dataset.bubbleId;
   gotoBubble(bubbleId);
   return false;
+});
+
+$("nav#menu-mobile:not(.open) .items").click(function () {
+  $("nav#menu-mobile").addClass("open");
 });
 
 // ---------------------------------------------------------------------------
@@ -58,14 +64,21 @@ function initBubbles () {
 }
 
 function gotoBubble (bubbleId) {
-  var link = $("nav .menu-item[data-bubble-id='"+ bubbleId +"']");
+  var links = $("nav .menu-item[data-bubble-id='"+ bubbleId +"']");
+  var linkDesktop = $("nav#menu-desktop .menu-item[data-bubble-id='"+ bubbleId +"']");
+  var linkMobile = $("nav#menu-mobile .menu-item[data-bubble-id='"+ bubbleId +"']");
+
+  // --- handle hash & state
+
+  window.location.hash = bubbleId;
+  state.currentBubbleId = bubbleId;
 
   // --- transform x bubbles
 
   var bubble = bubbles.find(function (e) {
     return e.bubbleId === bubbleId;
   });
-  var bubblex = bubble.x;
+  var bubblex = bubble.x + 1; // 1 accounts for border (i think)
   var transformBubbles = "translateX("+ -bubblex +"px)";
   $(".bubbles").css("transform", transformBubbles);
   $(".bubble[data-bubble-id='"+ bubbleId +"']")[0].scrollTo(0,0);
@@ -78,24 +91,46 @@ function gotoBubble (bubbleId) {
   var transformBbbg = "translateX("+ -bbbgx +"px)";
   $(".bbbg").css("transform", transformBbbg);
 
-  // --- transform x line
+  // --- desktop transform x line
 
-  var linex = $(link).offset().left - 5;
+  var linex = $(linkDesktop).offset().left - 5;
   var transformLine = "translateX("+ linex +"px)";
   $(".line").css("transform", transformLine);
 
-  // --- handle menu links
+  // --- handle menu links (desktop & mobile)
 
   $("nav .menu-item").removeClass("active");
-  $(link).addClass("active");
+  $(links).addClass("active");
 
-  // --- handle hash
+  // --- handle menu (mobile)
 
-  window.location.hash = bubbleId;
+  adjustMobileNavFromState();
+}
 
-  // --- handle state
+function adjustMobileNavFromState () {
+  var linkIndex = 0;
+  var found = false;
+  $("nav#menu-mobile .menu-item[data-bubble-id]").each(function () {
+    if (!found && this.dataset.bubbleId === state.currentBubbleId) {
+      found = true;
+    }
+    linkIndex += (found ? 0 : 1);
+  });
+  console.log(linkIndex)
+  var mmiy = linkIndex * menuMobileH;
+  $("nav#menu-mobile .items").css("top", -mmiy +"px");
+  $("nav#menu-mobile").removeClass("open");
 
-  state.currentBubbleId = bubbleId;
+  console.log(window.menuMeta)
+  var prevBubbleId = null;
+  var nextBubbleId = null;
+  var itemIndex = window.menuMeta.findIndex(function (e) { return e.bubbleId === state.currentBubbleId; });
+  if (itemIndex === -1) { throw "error 24398752"; }
+  if (itemIndex > 0) { prevBubbleId = window.menuMeta[itemIndex-1].bubbleId; }
+  if (itemIndex < window.menuMeta.length - 1) { nextBubbleId = window.menuMeta[itemIndex+1].bubbleId; }
+  $("#arrow-left")[0].dataset.bubbleId = (prevBubbleId ? prevBubbleId : "");
+  $("#arrow-right")[0].dataset.bubbleId = (nextBubbleId ? nextBubbleId : "");
+
 }
 
 function setFooterAnimation () {
@@ -105,36 +140,23 @@ function setFooterAnimation () {
   var fww = footerWrapper.offsetWidth;
   if (footerInterval) { 
     clearInterval(footerInterval); 
-
-
     // footerContent.style.transition = "left 0ms";
     // footerContent.style.left = "0px";
-
     footerContent.style.transition = "transform 0ms";
     footerContent.style.transform = "translateX(0px)";
-
   }
   if (fww < fcw) {
     var diff = fcw - fww;
     var time = diff * 17;
     var ease = "linear"; // "ease-in-out";
     console.log(time, "time")
-    
-
     // footerContent.style.transition = "left "+ Math.round(time) +"ms "+ ease;
-    
     footerContent.style.transition = "transform "+ Math.round(time) +"ms "+ ease;
-
     footerCount = 0;
     var move = function () {
       var left = (footerCount % 2 === 0) ? (-diff) : 0;
-      
-
       // footerContent.style.left = left + "px";
-
       footerContent.style.transform = "translateX("+ left + "px)";
-
-
       footerCount++;
     }
     footerInterval = setInterval(move, time + 1000);
@@ -142,3 +164,24 @@ function setFooterAnimation () {
   }
 }
 
+function showTime(){
+  var date = new Date();
+  var h = date.getHours(); // 0 - 23
+  var m = date.getMinutes(); // 0 - 59
+  var s = date.getSeconds(); // 0 - 59
+  var session = "AM";
+  if(h == 0){
+    h = 12;
+  }
+  if(h > 12){
+    h = h - 12;
+    session = "PM";
+  }
+  h = (h < 10) ? "0" + h : h;
+  m = (m < 10) ? "0" + m : m;
+  s = (s < 10) ? "0" + s : s;
+  var time = h + ":" + m + ":" + s + " " + session;
+  document.getElementById("time").innerText = time;
+  document.getElementById("time").textContent = time;
+  setTimeout(showTime, 1000);
+}

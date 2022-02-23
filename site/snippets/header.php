@@ -1,3 +1,16 @@
+<?php
+$menuItems = $site->menuItems()->toStructure();
+$menuItemsNum = $menuItems->count() + 2; // home and lang switch
+
+// kill($menuItems->toArray());
+$menuMeta = [
+  ["bubbleId" => "landing"],
+];
+foreach ($menuItems as $item) {
+  $menuMeta[] = ["bubbleId" => $item->menuPage()->toPage()->id()];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +22,17 @@
   <?php snippet("favicon") ?>
   <?php snippet("load-scripts") ?>
 
+  <style>
+  nav#menu-mobile.open {
+    height: <?= c::get("menu-mobile-h") * $menuItemsNum ?>px;
+  }
+  </style>
+
   <script>
     window.currentPage = '<?= $page->uid() ?>';
     window.currentTemplate = '<?= $page->template() ?>';
+    window.menuMobileH = <?= c::get("menu-mobile-h") ?>; // must match css $menu-mobile-h
+    window.menuMeta = <?= json_encode($menuMeta) ?>;
   </script>
 
 </head>

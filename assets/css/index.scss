@@ -4,12 +4,12 @@
 // Variables
 // -----------------------------------------------------------------------------
 
-$button-h: 47px;
-$button-h-s: 37px;
-$menu-h: 50px;
-$border-radius: 3px;
 $space: 15px;
-
+$border-radius: 3px;
+$menu-h: 50px;
+$menu-mobile-h: 36px;
+// $button-h: 47px;
+// $button-h-s: 37px;
 
 // -----------------------------------------------------------------------------
 // External files import
@@ -83,27 +83,27 @@ a {
 // REUSABLE PIECES
 // -----------------------------------------------------------------------------
 
-.button {
-  display: inline-flex; align-items: center; justify-content: center;
-  height: $button-h;
-  border: 1px solid grey;
-  color: grey;
-  @include font-sans-m;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: $border-radius;
-  padding: 0 $space;
-  transition: background-color 400ms, color 400ms;
-  &:hover, &.active {
-    background-color: grey;
-    color: grey;
-  }
-  &.small {
-    height: $button-h-s;
-    width: auto; padding: 0 10px;
-    text-transform: none;
-  }
-}
+// .button {
+//   display: inline-flex; align-items: center; justify-content: center;
+//   height: $button-h;
+//   border: 1px solid grey;
+//   color: grey;
+//   @include font-sans-m;
+//   text-transform: uppercase;
+//   text-decoration: none;
+//   border-radius: $border-radius;
+//   padding: 0 $space;
+//   transition: background-color 400ms, color 400ms;
+//   &:hover, &.active {
+//     background-color: grey;
+//     color: grey;
+//   }
+//   &.small {
+//     height: $button-h-s;
+//     width: auto; padding: 0 10px;
+//     text-transform: none;
+//   }
+// }
 
 .anchor {
   position: relative;
@@ -144,6 +144,8 @@ a {
 }
 
 .screen {
+  z-index: 10;
+  pointer-events: none;
   position: fixed;
   top: 0; bottom: 0; left: 0; right: 0;
   overflow: hidden;
@@ -160,11 +162,20 @@ a {
       .bubble {
 
         scroll-behavior: smooth;
+        pointer-events: auto;
 
         background-color: white;
         border: 1px solid black;
-        border-radius: 2px;
+        border-radius: $border-radius;
         width: 720px;
+
+        @include media-breakpoint-down(md) {
+          width: 640px;
+        }
+        @include media-breakpoint-down(sm) {
+          width: calc(100vw - #{$space * 2});
+        }
+
         max-height: 80vh;
         overflow-y: scroll;
         position: relative;
@@ -195,14 +206,39 @@ a {
       }
     }
   }
+  
+
+  @include media-breakpoint-down(sm) {
+
+    .bubbles {
+      align-items: flex-start;
+      
+      .bubble-wrapper {
+        align-items: flex-start;
+        justify-content: center;
+        max-height: 100vh;
+        padding: 30vh 0;
+        overflow: scroll;
+        pointer-events: auto;
+
+        .bubble {
+          max-height: none;
+          .text {
+            p { padding-left: 30px; }
+          }
+        }
+      }
+    }
+  }
 }
 
 // -----------------------------------------------------------------------------
 // SPECIFIC
 // -----------------------------------------------------------------------------
 
-nav#menu-header {
+nav#menu-desktop {
   z-index: 6;
+  @include media-breakpoint-down(sm) { display: none; }
   position: fixed;
   top: 0; left: 0; right: 0;
   transition: background-color 400ms, padding 400ms;
@@ -214,48 +250,68 @@ nav#menu-header {
     display: flex; align-items: center; justify-content: space-between;
   }
   a.menu-item {
-    // border: 1px solid green;
     flex-grow: 1;
     text-decoration: none;
-    @include font-sans-m;
     &.active, &:hover {
-      // text-decoration: underline;
       color: blue;
     }
   }
 
-  a#header-low-a {
-    margin-right: 3px;
-    &:hover {
-      color: grey;
+  // a#header-low-a {
+  //   margin-right: 3px;
+  //   &:hover {
+  //     color: grey;
+  //     text-decoration: none;
+  //   }
+  // }
+}
+
+nav#menu-mobile {
+  z-index: 15;
+  @include media-breakpoint-up(md) { display: none; }
+  position: fixed;
+  top: $space; right: $space; left: $space;
+  height: $menu-mobile-h;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: $border-radius;
+  @include transition(height 400ms);
+  overflow: hidden;
+  .items {
+    transition: top 400ms;
+    position: relative;
+    top: 0;
+    a.menu-item {
+      pointer-events: none;
       text-decoration: none;
+      display: flex; align-items: center; justify-content: center;
+      color: black;
+      height: $menu-mobile-h;
+      &.active, &:hover {
+        color: blue;
+      }
     }
   }
-}
-#menu-xs {
-  z-index: 5;
-  position: fixed;
-  top: 0; right: -100%;
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-  background-color: grey;
-  padding: $menu-h 0;
-  @include transition(right 400ms);
-  @at-root body.menu-xs-open & {
-    right: 0;
+  .arrow {
+    position: absolute;
+    top: 0;
+    background-color: yellow;
+    height: $menu-mobile-h; width: $menu-mobile-h;
+    display: flex; align-items: center; justify-content: center;
+    &[data-bubble-id=''] {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+    &#arrow-left { left: 0; }
+    &#arrow-right { right: 0; }
   }
-  display: flex; flex-flow: column nowrap; justify-content: center; align-items: stretch;
-
-  a.item {
-    // color: white;
-    text-decoration: none;
-    text-align: center;
-    display: block;
-    @include font-sans-xl;
-    // text-transform: uppercase;
-    &.small {
-      @include font-sans-m;
+  &.open {
+    // height: $menu-mobile-h * 8; // done in JS
+    .items {
+      top: 0 !important;
+      a.menu-item {
+        pointer-events: auto;
+      }
     }
   }
 }
@@ -263,9 +319,7 @@ nav#menu-header {
 .footer {
   position: fixed;
   bottom: 0; left: 0; right: 0;
-  padding: 0 $space;
-  height: $menu-h;
-  display: flex; align-items: center; justify-content: flex-start;
+  padding: 10px $space;
   .content-wrapper {
     width: 100%;
     white-space: nowrap;
