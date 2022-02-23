@@ -7,7 +7,7 @@
 $space: 15px;
 $border-radius: 3px;
 $menu-h: 50px;
-$menu-mobile-h: 36px;
+$menu-mobile-h: 42px;
 // $button-h: 47px;
 // $button-h-s: 37px;
 
@@ -296,8 +296,9 @@ nav#menu-mobile {
   .arrow {
     position: absolute;
     top: 0;
-    // background-color: yellow;
-    height: $menu-mobile-h; width: #{$menu-mobile-h * 1.3};
+    height: $menu-mobile-h;
+    width: #{$menu-mobile-h * 1.3};
+    width: $menu-mobile-h;
     display: flex; align-items: center; justify-content: center;
     padding-top: 3px;
     &:active {

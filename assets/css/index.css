@@ -731,7 +731,7 @@ nav#menu-mobile {
   top: 15px;
   right: 15px;
   left: 15px;
-  height: 36px;
+  height: 42px;
   background-color: white;
   border: 1px solid black;
   border-radius: 3px;
@@ -755,14 +755,15 @@ nav#menu-mobile {
       align-items: center;
       justify-content: center;
       color: black;
-      height: 36px; }
+      height: 42px; }
       nav#menu-mobile .items a.menu-item.active, nav#menu-mobile .items a.menu-item:hover {
         color: blue; }
   nav#menu-mobile .arrow {
     position: absolute;
     top: 0;
-    height: 36px;
-    width: 46.8px;
+    height: 42px;
+    width: 54.6px;
+    width: 42px;
     display: flex;
     align-items: center;
     justify-content: center;

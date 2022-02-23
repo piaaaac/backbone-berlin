@@ -13,7 +13,15 @@ $landingBubbleId = Str::slug(page("landing")->id());
       ?>
       <p style="text-align: right; flex-grow: 1;"><a class="menu-item" href="#" data-bubble-id="<?= $id ?>"><?= $text ?></a></p>
     <?php endforeach ?>
-    <p style="text-align: right; flex-grow: 1;"><a href="#" class="menu-item no-u">De</a></p>
+    <?php foreach($kirby->languages() as $language): 
+      if ($kirby->language() == $language) continue;
+      ?>
+      <p style="text-align: right; flex-grow: 1;">
+        <a href="<?= $language->url() ?>" hreflang="<?= $language->code() ?>" class="menu-item no-u">
+          <?= html($language->name()) ?>
+        </a>
+      </p>
+    <?php endforeach ?>
   </div>
 </nav>
 
@@ -27,7 +35,11 @@ $landingBubbleId = Str::slug(page("landing")->id());
       ?>
       <a class="menu-item" href="#" data-bubble-id="<?= $id ?>"><?= $text ?></a>
     <?php endforeach ?>
-    <a href="#" class="menu-item no-u">De</a>
+    <?php foreach($kirby->languages() as $language): 
+      if ($kirby->language() == $language) continue;
+      ?>
+      <a href="<?= $language->url() ?>" hreflang="<?= $language->code() ?>" class="menu-item no-u"><?= html($language->name()) ?></a>
+    <?php endforeach ?>
   </div>
   <a class="arrow" id="arrow-left" data-bubble-id=""></a>
   <a class="arrow" id="arrow-right" data-bubble-id=""></a>

@@ -5,12 +5,13 @@ return [
   
   // --- Custom
 
-  "menu-mobile-h" => 36,
+  "menu-mobile-h" => 42,
 
   // --- Kirby
 
   "debug" => true,
   "whoops" => true,
+  "languages" => true,
 
   // "routes" => require_once 'routes.php',
 

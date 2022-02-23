@@ -1,5 +1,5 @@
 <div class="footer">
-  <div class="clock"><strong>Current time</strong> <span id="time"></span></div>
+  <div class="clock"><strong><?= t("current-time") ?></strong> <span id="time"></span></div>
   <div class="content-wrapper">
     <div class="content">
       <?= $site->footerText()->kti() ?>
