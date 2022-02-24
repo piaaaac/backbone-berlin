@@ -146,7 +146,7 @@ input:invalid, textarea:invalid {
 
 .font-sans-m {
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   letter-spacing: 0;
   line-height: 1.2em;
   font-weight: 400;
@@ -154,7 +154,7 @@ input:invalid, textarea:invalid {
   font-stretch: normal; }
   @media (min-width: 576px) {
     .font-sans-m {
-      font-size: 16px; } }
+      font-size: 17px; } }
   @media (min-width: 768px) {
     .font-sans-m {
       font-size: 18px; } }
@@ -167,7 +167,7 @@ input:invalid, textarea:invalid {
 
 p {
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   letter-spacing: 0;
   line-height: 1.2em;
   font-weight: 400;
@@ -176,7 +176,7 @@ p {
   margin-bottom: 1em; }
   @media (min-width: 576px) {
     p {
-      font-size: 16px; } }
+      font-size: 17px; } }
   @media (min-width: 768px) {
     p {
       font-size: 18px; } }
@@ -212,7 +212,7 @@ h1 {
 
 h2 {
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   letter-spacing: 0;
   line-height: 1.2em;
   font-weight: 400;
@@ -220,7 +220,7 @@ h2 {
   font-stretch: normal; }
   @media (min-width: 576px) {
     h2 {
-      font-size: 16px; } }
+      font-size: 17px; } }
   @media (min-width: 768px) {
     h2 {
       font-size: 18px; } }
@@ -233,7 +233,7 @@ h2 {
 
 h3 {
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   letter-spacing: 0;
   line-height: 1.2em;
   font-weight: 400;
@@ -241,7 +241,7 @@ h3 {
   font-stretch: normal; }
   @media (min-width: 576px) {
     h3 {
-      font-size: 16px; } }
+      font-size: 17px; } }
   @media (min-width: 768px) {
     h3 {
       font-size: 18px; } }
@@ -254,7 +254,7 @@ h3 {
 
 h4 {
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   letter-spacing: 0;
   line-height: 1.2em;
   font-weight: 400;
@@ -262,7 +262,7 @@ h4 {
   font-stretch: normal; }
   @media (min-width: 576px) {
     h4 {
-      font-size: 16px; } }
+      font-size: 17px; } }
   @media (min-width: 768px) {
     h4 {
       font-size: 18px; } }
@@ -275,7 +275,7 @@ h4 {
 
 h5 {
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   letter-spacing: 0;
   line-height: 1.2em;
   font-weight: 400;
@@ -283,7 +283,7 @@ h5 {
   font-stretch: normal; }
   @media (min-width: 576px) {
     h5 {
-      font-size: 16px; } }
+      font-size: 17px; } }
   @media (min-width: 768px) {
     h5 {
       font-size: 18px; } }
@@ -296,7 +296,7 @@ h5 {
 
 h6 {
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   letter-spacing: 0;
   line-height: 1.2em;
   font-weight: 400;
@@ -304,7 +304,7 @@ h6 {
   font-stretch: normal; }
   @media (min-width: 576px) {
     h6 {
-      font-size: 16px; } }
+      font-size: 17px; } }
   @media (min-width: 768px) {
     h6 {
       font-size: 18px; } }
@@ -549,7 +549,7 @@ body {
   width: 100vw;
   color: black;
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   letter-spacing: 0;
   line-height: 1.2em;
   font-weight: 400;
@@ -557,7 +557,7 @@ body {
   font-stretch: normal; }
   @media (min-width: 576px) {
     body {
-      font-size: 16px; } }
+      font-size: 17px; } }
   @media (min-width: 768px) {
     body {
       font-size: 18px; } }
@@ -604,10 +604,16 @@ a {
   .bbbg-wrap .bbbg {
     position: absolute;
     top: 0;
-    left: 12vw;
+    left: 10px;
     height: 100%;
-    margin-right: 12vw;
-    transition: transform 1200ms; }
+    transition: transform 1500ms cubic-bezier(0.69, 0.005, 0.305, 1);
+    transition: transform 1800ms;
+    image-rendering: pixelated; }
+
+.ascii {
+  font-family: "Courier New", monospace;
+  height: auto !important;
+  background-color: yellow; }
 
 .line {
   z-index: 2000;
@@ -617,9 +623,10 @@ a {
   bottom: 0;
   width: 1px;
   background-color: blue;
-  transition: transform 800ms;
+  transition: transform 1500ms;
   transform: translateX(10px);
-  transform: translateX(50vw); }
+  transform: translateX(50vw);
+  transform: translateX(100vw); }
 
 .screen {
   z-index: 10;
@@ -638,7 +645,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    transition: transform 1000ms; }
+    transition: transform 1500ms; }
     .screen .bubbles .bubble-wrapper {
       display: flex;
       align-items: center;
@@ -654,6 +661,7 @@ a {
         width: 720px;
         max-height: 80vh;
         overflow-y: scroll;
+        overflow-x: hidden;
         position: relative; }
         @media (max-width: 991.98px) {
           .screen .bubbles .bubble-wrapper .bubble {

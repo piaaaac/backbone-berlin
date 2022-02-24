@@ -7,6 +7,4 @@
 
 - ascii as text
 
-- line mobile
-
-- lang switch
+- safari resize

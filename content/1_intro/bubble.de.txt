@@ -10,7 +10,7 @@ Sectionitems:
 
 - 
   sectionname: ""
-  sectiontext: '# *Backbone* ist eine in Berlin ansässige Gruppe, die Forschungsaktivitäten, Co-Creation und Aktivismus ✊🏼 rund um die Auswirkungen der Arbeit als performativer Künstler heute fördert.'
+  sectiontext: '# *Backbone* ist eine in Berlin ansässige Gruppe, die Forschungs­aktivi­täten, Co-Creation und Aktivismus ✊🏼 rund um die Auswirkungen der Arbeit als performativer Künstler heute fördert.'
 
 ----
 

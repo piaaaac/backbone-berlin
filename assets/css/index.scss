@@ -5,11 +5,10 @@
 // -----------------------------------------------------------------------------
 
 $space: 15px;
+$accent: blue;
 $border-radius: 3px;
 $menu-h: 50px;
 $menu-mobile-h: 42px;
-// $button-h: 47px;
-// $button-h-s: 37px;
 
 // -----------------------------------------------------------------------------
 // External files import
@@ -53,14 +52,9 @@ $menu-mobile-h: 42px;
   text-rendering: geometricPrecision; // OK on chrome
 }
 
-// html {
-//   scroll-behavior: smooth;
-// }
-
 body {
   overflow-x: hidden;
   width: 100vw;
-  // background-color: grey;
   color: black;
   @include font-sans-m;
   &.media-open { overflow: hidden; }
@@ -76,35 +70,13 @@ a {
   // text-decoration: underline;
   // text-decoration-thickness: 1px;
   // text-underline-offset: 10%;
-  color: blue;
+  color: $accent;
   text-decoration: none;
 }
 
 // -----------------------------------------------------------------------------
 // REUSABLE PIECES
 // -----------------------------------------------------------------------------
-
-// .button {
-//   display: inline-flex; align-items: center; justify-content: center;
-//   height: $button-h;
-//   border: 1px solid grey;
-//   color: grey;
-//   @include font-sans-m;
-//   text-transform: uppercase;
-//   text-decoration: none;
-//   border-radius: $border-radius;
-//   padding: 0 $space;
-//   transition: background-color 400ms, color 400ms;
-//   &:hover, &.active {
-//     background-color: grey;
-//     color: grey;
-//   }
-//   &.small {
-//     height: $button-h-s;
-//     width: auto; padding: 0 10px;
-//     text-transform: none;
-//   }
-// }
 
 .anchor {
   position: relative;
@@ -130,18 +102,27 @@ a {
   overflow: hidden;
   .bbbg {
     position: absolute;
-    top: 0; left: 12vw; height: 100%; margin-right: 12vw;
-    transition: transform 1200ms;
+    top: 0; left: 10px; height: 100%;
+    transition: transform 1500ms cubic-bezier(0.690, 0.005, 0.305, 1.000);
+    transition: transform 1800ms;
+    image-rendering: pixelated;
   }
+}
+.ascii {
+  font-family: "Courier New", monospace;
+  // white-space: nowrap;
+  height: auto !important;
+  background-color: yellow;
 }
 
 .line {
   z-index: 2000;
   position: fixed; left: 0px; top: 0; bottom: 0; width: 1px;
-  background-color: blue;
-  transition: transform 800ms;
+  background-color: $accent;
+  transition: transform 1500ms;
   transform: translateX(10px);
   transform: translateX(50vw);
+  transform: translateX(100vw);
 }
 
 .screen {
@@ -152,11 +133,9 @@ a {
   overflow: hidden;
   display: flex; align-items: center; justify-content: flex-start; flex-wrap: nowrap;
   .bubbles {
-    // background-color: green;
     display: flex; align-items: center; justify-content: flex-start;
-    transition: transform 1000ms;
+    transition: transform 1500ms;
     .bubble-wrapper {
-      // border: 1px solid blue;
       display: flex; align-items: center; justify-content: center;
       &[data-level='1'] { width: 100vw; }
       &[data-level='2'] { }
@@ -179,6 +158,7 @@ a {
 
         max-height: 80vh;
         overflow-y: scroll;
+        overflow-x: hidden;
         position: relative;
         .submenu {
           position: sticky;
@@ -243,8 +223,7 @@ nav#menu-desktop {
   position: fixed;
   top: 0; left: 0; right: 0;
   transition: background-color 400ms, padding 400ms;
-  padding: 0 $space;
-  // background-color: grey; 
+  padding: 0 $space; 
   a { color: black;}
   .wrapper {
     height: $menu-h;
@@ -254,17 +233,9 @@ nav#menu-desktop {
     flex-grow: 1;
     text-decoration: none;
     &.active, &:hover {
-      color: blue;
+      color: $accent;
     }
   }
-
-  // a#header-low-a {
-  //   margin-right: 3px;
-  //   &:hover {
-  //     color: grey;
-  //     text-decoration: none;
-  //   }
-  // }
 }
 
 nav#menu-mobile {
@@ -289,7 +260,7 @@ nav#menu-mobile {
       color: black;
       height: $menu-mobile-h;
       &.active, &:hover {
-        color: blue;
+        color: $accent;
       }
     }
   }

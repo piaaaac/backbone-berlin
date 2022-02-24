@@ -11,16 +11,17 @@ var state = {
 var footerCount;
 var footerInterval;
 
-setFooterAnimation();
-showTime();
+$(document).ready(function () {
+  setFooterAnimation();
+  showTime();
 
+  // --- check and assign hash, then go
 
-// --- check and assign hash, then go
-
-if (window.location.hash && window.location.hash.length > 1) {
-  state.currentBubbleId = window.location.hash.split("#")[1];
-}
-gotoBubble(state.currentBubbleId);
+  if (window.location.hash && window.location.hash.length > 1) {
+    state.currentBubbleId = window.location.hash.split("#")[1];
+  }
+  gotoBubble(state.currentBubbleId);
+});
 
 // ---------------------------------------------------------------------------
 // EVENTS
@@ -41,6 +42,21 @@ $("nav .menu-item[data-bubble-id], nav#menu-mobile .arrow").click(function () {
 $("nav#menu-mobile:not(.open) .items").click(function () {
   $("nav#menu-mobile").addClass("open");
 });
+
+ // --- Key bindings
+
+document.addEventListener('keyup', function (event) {
+  if (event.defaultPrevented) { return; }
+  // console.log(event.key, event.keyCode)
+  var key = event.key || event.keyCode;
+  if (key === 'ArrowLeft' || key === 'Left' || key === 37) { 
+    $("#arrow-left[data-bubble-id!='']").click();
+  }
+  if (key === 'ArrowRight' || key === 'Right' || key === 39) { 
+    $("#arrow-right[data-bubble-id!='']").click();
+  }
+});
+
 
 // ---------------------------------------------------------------------------
 // FUNCTIONS
@@ -85,9 +101,19 @@ function gotoBubble (bubbleId) {
   
   // --- transform x background
 
-  var bbbgw = $(".bbbg-wrap").width();
+  var bbbgw = $(".bbbg").width();
   var bubblesw = $(".bubbles").width();
-  var bbbgx = apMap(bubblex, 0,bubblesw, 0,bbbgw);
+
+  // v1
+  // var bbbgx = apMap(bubblex, 0,bubblesw, 0,bbbgw);
+  var bbbgx = apMap(bubblex, 0,bubblesw, -200,bbbgw+200);
+
+  // v2
+  // var bbbgx = apMap(bubblex, 0,bubblesw, -200,bbbgw+200);
+  // console.log("------------>", bbbgw, bubblesw, bbbgx)
+  // var maxBubblex = bubbles.map(e => e.x).reduce((a, b) => { return Math.max(a, b) });
+  // var bbbgx = apMap(bubblex, 0,maxBubblex, 0,bbbgw*2.1);
+
   var transformBbbg = "translateX("+ -bbbgx +"px)";
   $(".bbbg").css("transform", transformBbbg);
 
