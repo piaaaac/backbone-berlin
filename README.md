@@ -8,3 +8,8 @@
 - ascii as text
 
 - safari resize
+
+
+
+$siteIndex = pages structure ordered according to menu
+

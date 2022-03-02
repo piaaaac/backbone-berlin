@@ -2,6 +2,14 @@ Title: Intro
 
 ----
 
+Bubbletype: bubble
+
+----
+
+Childrenbubbles: 
+
+----
+
 Bubbletitle: 
 
 ----

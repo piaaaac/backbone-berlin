@@ -2,6 +2,14 @@ Title: Info
 
 ----
 
+Bubbletype: bubble
+
+----
+
+Childrenbubbles: 
+
+----
+
 Bubbletitle: Informations
 
 ----

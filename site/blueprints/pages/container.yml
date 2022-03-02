@@ -1,0 +1,27 @@
+title: Bubbles container
+# preset: page
+# pages: true
+#   template: bubble
+# fields: false
+
+
+
+
+
+
+
+columns:
+  - 1/1:
+    sections:
+
+      pages:
+        type: pages
+        headline: Bubbles
+        template: bubble
+
+      # meta:
+      #   type: fields
+      #   fields:
+
+
+

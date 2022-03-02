@@ -2,6 +2,14 @@ Title: Archive
 
 ----
 
+Bubbletype: bubble
+
+----
+
+Childrenbubbles: 
+
+----
+
 Bubbletitle: 
 
 ----

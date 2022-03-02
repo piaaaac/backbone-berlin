@@ -1,0 +1,16 @@
+Title: test 85
+
+----
+
+Sectionitems:
+
+- 
+  sectionname: Bar
+  sectiontext: lalala
+- 
+  sectionname: char
+  sectiontext: so far
+
+----
+
+Bubbletitle: Foo 85

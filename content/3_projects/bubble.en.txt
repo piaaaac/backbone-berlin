@@ -2,6 +2,17 @@ Title: Projects
 
 ----
 
+Bubbletype: container
+
+----
+
+Childrenbubbles:
+
+- project-test-1
+- project-test-2
+
+----
+
 Bubbletitle: 
 
 ----

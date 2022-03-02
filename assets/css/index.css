@@ -583,6 +583,10 @@ a {
   height: 0px;
   width: 10px; }
 
+.hide-in-place {
+  opacity: 0;
+  pointer-events: none; }
+
 @keyframes blink {
   0% {
     opacity: 0.5; }
@@ -645,13 +649,19 @@ a {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    transition: transform 1500ms; }
+    transition: transform 2500ms; }
     .screen .bubbles .bubble-wrapper {
       display: flex;
       align-items: center;
       justify-content: center; }
       .screen .bubbles .bubble-wrapper[data-level='1'] {
         width: 100vw; }
+      @media (max-width: 767.98px) {
+        .screen .bubbles .bubble-wrapper[data-level='2'] {
+          width: 100vw; } }
+      @media (min-width: 768px) {
+        .screen .bubbles .bubble-wrapper[data-level='2'] {
+          padding: 0 40px; } }
       .screen .bubbles .bubble-wrapper .bubble {
         scroll-behavior: smooth;
         pointer-events: auto;
@@ -691,9 +701,6 @@ a {
           margin-bottom: -10px;
           position: relative;
           z-index: 2; }
-      .screen .bubbles .bubble-wrapper.hide {
-        opacity: 0;
-        pointer-events: none; }
   @media (max-width: 767.98px) {
     .screen .bubbles {
       align-items: flex-start; }
@@ -733,10 +740,40 @@ nav#menu-desktop {
     nav#menu-desktop a.menu-item.active, nav#menu-desktop a.menu-item:hover {
       color: blue; }
 
-nav#menu-mobile {
-  z-index: 15;
+nav.desktop-arrows {
+  z-index: 16;
   position: fixed;
-  top: 15px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  pointer-events: none; }
+  @media (max-width: 767.98px) {
+    nav.desktop-arrows {
+      display: none; } }
+  nav.desktop-arrows .arrow {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 3px;
+    pointer-events: auto; }
+    nav.desktop-arrows .arrow.arrow-left::after {
+      content: url("../images/arrow-l.svg");
+      line-height: 0; }
+    nav.desktop-arrows .arrow.arrow-right::after {
+      content: url("../images/arrow-r.svg");
+      line-height: 0; }
+
+nav.menu-mobile {
+  position: fixed;
   right: 15px;
   left: 15px;
   height: 42px;
@@ -749,14 +786,21 @@ nav#menu-mobile {
   -o-transition: height 400ms;
   transition: height 400ms;
   overflow: hidden; }
+  nav.menu-mobile[data-level="1"] {
+    z-index: 16;
+    top: 15px;
+    left: 25px; }
+  nav.menu-mobile[data-level="2"] {
+    z-index: 15;
+    top: 67px; }
   @media (min-width: 768px) {
-    nav#menu-mobile {
+    nav.menu-mobile {
       display: none; } }
-  nav#menu-mobile .items {
+  nav.menu-mobile .items {
     transition: top 400ms;
     position: relative;
     top: 0; }
-    nav#menu-mobile .items a.menu-item {
+    nav.menu-mobile .items a.menu-item {
       pointer-events: none;
       text-decoration: none;
       display: flex;
@@ -764,9 +808,9 @@ nav#menu-mobile {
       justify-content: center;
       color: black;
       height: 42px; }
-      nav#menu-mobile .items a.menu-item.active, nav#menu-mobile .items a.menu-item:hover {
+      nav.menu-mobile .items a.menu-item.active, nav.menu-mobile .items a.menu-item:hover {
         color: blue; }
-  nav#menu-mobile .arrow {
+  nav.menu-mobile .arrow {
     position: absolute;
     top: 0;
     height: 42px;
@@ -776,22 +820,22 @@ nav#menu-mobile {
     align-items: center;
     justify-content: center;
     padding-top: 3px; }
-    nav#menu-mobile .arrow:active {
+    nav.menu-mobile .arrow:active {
       opacity: 0.5; }
-    nav#menu-mobile .arrow[data-bubble-id=''] {
+    nav.menu-mobile .arrow[data-bubble-id=''] {
       opacity: 0.3;
       pointer-events: none; }
-    nav#menu-mobile .arrow#arrow-left {
+    nav.menu-mobile .arrow.arrow-left {
       left: 0; }
-      nav#menu-mobile .arrow#arrow-left::after {
+      nav.menu-mobile .arrow.arrow-left::after {
         content: url("../images/arrow-l.svg"); }
-    nav#menu-mobile .arrow#arrow-right {
+    nav.menu-mobile .arrow.arrow-right {
       right: 0; }
-      nav#menu-mobile .arrow#arrow-right::after {
+      nav.menu-mobile .arrow.arrow-right::after {
         content: url("../images/arrow-r.svg"); }
-  nav#menu-mobile.open .items {
+  nav.menu-mobile.open .items {
     top: 0 !important; }
-    nav#menu-mobile.open .items a.menu-item {
+    nav.menu-mobile.open .items a.menu-item {
       pointer-events: auto; }
 
 .footer {

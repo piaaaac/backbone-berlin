@@ -2,8 +2,8 @@
 <svg width="37px" height="37px" viewBox="0 0 37 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>arrow-l</title>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="assets" transform="translate(-210.000000, -258.000000)" fill="#000000" fill-rule="nonzero">
-            <polygon id="Path-Copy" points="231.421451 265.855724 220.653684 276.623491 231.421451 287.391258 234.956985 283.855724 227.724218 276.623491 234.956985 269.391258"></polygon>
+        <g id="assets" transform="translate(-210.000000, -322.000000)" stroke="#0030FF">
+            <polyline id="Path-2" points="233.956985 330.355724 224.189218 340.123491 233.956985 349.891258"></polyline>
         </g>
     </g>
 </svg>

@@ -3,6 +3,7 @@ preset: page
 pages: false
 fields:
 
+  # v1
   bubbleTitle:
     type: text
 
@@ -11,8 +12,42 @@ fields:
     label: Sections
     fields:
       sectionName:
+        label: Anchor name
         type: text
         min: 1
         max: 1
+        help: "Only visible if there's more than one section"
       sectionText:
         type: textarea
+
+  # v2
+  # bubbleType:
+  #   type: select
+  #   required: true
+  #   options:
+  #     bubble: Single bubble
+  #     container: Multiple bubbles
+
+  # childrenBubbles:
+  #   type: pages
+  #   query: site.pages.filterBy("bubbleType", "bubble")
+  #   when: 
+  #     bubbleType: container
+
+  # bubbleTitle:
+  #   type: text
+  #   when: 
+  #     bubbleType: bubble
+
+  # sectionItems:
+  #   type: structure
+  #   label: Sections
+  #   fields:
+  #     sectionName:
+  #       type: text
+  #       min: 1
+  #       max: 1
+  #     sectionText:
+  #       type: textarea
+  #   when: 
+  #     bubbleType: bubble
