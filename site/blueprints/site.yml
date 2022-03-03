@@ -26,21 +26,21 @@ columns:
                 width: 1/2
                 type: text
 
-          asciiBgs:
-            type: structure
-            label: ASCII backgrounds
-            fields:
-              lines:
-                type: number
-                width: 1/2
-                translate: false
-              columns:
-                type: number
-                width: 1/2
-                translate: false
-              ascii:
-                type: textarea
-                translate: false
+          # asciiBgs:
+          #   type: structure
+          #   label: ASCII backgrounds
+          #   fields:
+          #     lines:
+          #       type: number
+          #       width: 1/2
+          #       translate: false
+          #     columns:
+          #       type: number
+          #       width: 1/2
+          #       translate: false
+          #     ascii:
+          #       type: textarea
+          #       translate: false
 
           footerText:
             type: text

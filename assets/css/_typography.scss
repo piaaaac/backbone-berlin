@@ -43,6 +43,7 @@ h1 {
   @include font-sans-xl;
   font-weight: 700;
   text-align: left;
+  margin-top: -0.15em;
 }
 h2 { @include font-sans-m; }
 h3 { @include font-sans-m; }

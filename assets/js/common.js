@@ -102,30 +102,23 @@ function initBubbles () {
   return bubblesData;
 }
 
+function handleArrowClick (direction, arrowMenuContext, level) {
+  
+  // --- find bubbleId using state & siteIndex
 
-
-
-
-
-
-
-function handleArrowClick (direction, menuContext, level) {
-  // find bubbleId using siteIndex
   var bubbleId;
-
-  console.log(direction +"---"+ menuContext +"---"+ level)
 
   if (level == 1) {
 
-    var currI = window.siteIndex.findIndex(e => (e.id === state.currentBubbleId));
-    if (currI === -1) { throw "Error 23987511"; }
-    var indexItem = window.siteIndex[currI];
-    console.log("indexItem", indexItem)
+    var itemLevel1 = window.siteIndex.find(function (item) { return item.id === state.currentBubbleId});
+    if (!itemLevel1) {
+      itemLevel1 = window.siteIndex.find(function (item) { return item.id === state.currentMenuContext});
+      if (!itemLevel1) { throw "error 23987511"; }
+    }
+    var currI = itemLevel1.index;
     var newI = currI + (direction === "left" ? -1 : 1);
     if (newI < 0 || newI >= window.siteIndex.length) { throw "Error 32895764"; }
-    console.log("newI", newI);
     var newIndexItem = window.siteIndex[newI];
-    console.log("newIndexItem", newIndexItem);
     if (newIndexItem.children === null) {
       bubbleId = newIndexItem.id;
     } else {
@@ -135,112 +128,36 @@ function handleArrowClick (direction, menuContext, level) {
 
   } else {
 
-    var indexItemL1 = window.siteIndex.find(e => (e.menuContext === menuContext));
-    if (!indexItemL1) { throw "Error 42089638"; }
-    var currI = indexItemL1.children.findIndex(e => (e.id === state.currentBubbleId));
-
-
-
-    var indexItemL2 = indexItemL1.children[currI];
-    console.log("indexItemL2", indexItemL2)
+    var itemLevel1 = window.siteIndex.find(function (item) { return item.id === state.currentBubbleId});
+    if (!itemLevel1) {
+      itemLevel1 = window.siteIndex.find(function (item) { return item.id === state.currentMenuContext});
+      if (!itemLevel1) { throw "error 43987542"; }
+    }
+    
+    // state.currentMenuContext is not "site"
+    var contextualIndex = itemLevel1.children;
+    var itemLevel2 = contextualIndex.find((item) => item.id === state.currentBubbleId);
+    var currI = itemLevel2.index;
     var newI = currI + (direction === "left" ? -1 : 1);
-    if (newI < 0 || newI >= indexItemL1.children.length) { throw "Error 32509867"; }
-    console.log("newI", newI);
-    var newIndexItem = indexItemL1.children[newI];
-    console.log("newIndexItem", newIndexItem);
+    if (newI < 0 || newI >= contextualIndex.length) { 
+      throw "Error 32509867"; 
+    }
+    var newIndexItem = contextualIndex[newI];
     bubbleId = newIndexItem.id;
 
   }
 
   gotoBubble(bubbleId);
 
-/*
-
-state = {
-  currentBubbleId: "landing"
-  currentMenuContext: "site"
 }
-
-
-w.siteIndex
-[
-  {id: 'landing', template: 'bubble', menuContext: 'site', index: 0, children: null}
-  {
-    children: null
-    id: "intro"
-    index: 1
-    menuContext: "site"
-    template: "bubble"
-  }
-  {id: 'sessions-21', template: 'bubble', menuContext: 'site', index: 2, children: null}
-  {id: 'projects-container', template: 'container', menuContext: 'site', index: 3, children: Array(2)}
-  {
-    id: "other-container"
-    index: 4
-    menuContext: "site"
-    template: "container"
-    children: [
-      {id: 'other-container-test-84', template: 'bubble', menuContext: 'other-container', index: 0, children: null}
-      {
-        children: null
-        id: "other-container-test-85"
-        index: 1
-        menuContext: "other-container"
-        template: "bubble"
-      }
-    ]
-  }
-  {id: 'calendar', template: 'bubble', menuContext: 'site', index: 5, children: null}
-  {id: 'archive', template: 'bubble', menuContext: 'site', index: 6, children: null}
-  {id: 'info', template: 'bubble', menuContext: 'site', index: 7, children: null}
-]
-*/
-
-
-
-
-  var pagesLevel1 = window.siteIndex.map(function (item) {
-    return item.id;
-  });
-  // >>> "landing", "intro", "sessions-21", "projects-container", "other-container", "calendar", "archive", "info"
-
-  var pagesLevel2 = [];
-  if (state.currentMenuContext !== "site") {
-    var contextualIndex = window.siteIndex.find(function (item) {
-      return item.id === state.currentMenuContext;
-    });
-    pagesLevel2 = contextualIndex.map(function (item) {
-      return item.id;
-    });
-  }
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 function gotoBubble (bubbleId) {
-  var links = $("nav .menu-item[data-bubble-id='"+ bubbleId +"']");
-  var linkDesktop = $("nav#menu-desktop .menu-item[data-bubble-id='"+ bubbleId +"']");
-  var linkMobile = $("nav.menu-mobile .menu-item[data-bubble-id='"+ bubbleId +"']");
   var bubble = bubbles.find(function (e) {
     return e.bubbleId === bubbleId;
   });
   if (!bubble) { throw "Error 23498756"; }
+  var menuDesktopId = bubble.menuContext === "site" ? bubbleId : bubble.menuContext;
+  var linkDesktop = $("nav#menu-desktop .menu-item[data-page-id='"+ menuDesktopId +"']");
 
   // --- handle hash & state
 
@@ -259,17 +176,7 @@ function gotoBubble (bubbleId) {
 
   var bbbgw = $(".bbbg").width();
   var bubblesw = $(".bubbles").width();
-
-  // v1
-  // var bbbgx = apMap(bubblex, 0,bubblesw, 0,bbbgw);
   var bbbgx = apMap(bubblex, 0,bubblesw, -200,bbbgw+200);
-
-  // v2
-  // var bbbgx = apMap(bubblex, 0,bubblesw, -200,bbbgw+200);
-  // console.log("------------>", bbbgw, bubblesw, bbbgx)
-  // var maxBubblex = bubbles.map(e => e.x).reduce((a, b) => { return Math.max(a, b) });
-  // var bbbgx = apMap(bubblex, 0,maxBubblex, 0,bbbgw*2.1);
-
   var transformBbbg = "translateX("+ -bbbgx +"px)";
   $(".bbbg").css("transform", transformBbbg);
 
@@ -285,78 +192,73 @@ function gotoBubble (bubbleId) {
   var transformLine = "translateX("+ linex +"px)";
   $(".line").css("transform", transformLine);
 
-  // --- handle menu links (desktop & mobile)
+  // --- handle desktop menu links
 
-  $("nav .menu-item").removeClass("active");
-  $(links).addClass("active");
+  $("nav#menu-desktop .menu-item").removeClass("active");
+  $(linkDesktop).addClass("active");
 
   // --- handle menu (mobile)
 
   adjustMobileNavFromState();
 }
 
-// V2
 function adjustMobileNavFromState () {
-
-
-  // state.currentBubbleId
-  // state.currentMenuContext
 
   // --- Handle level 2 menus visibility
 
   $("nav[data-level='2']").addClass("hide-in-place");
   $("nav[data-level='2'][data-menu-context='"+ state.currentMenuContext +"']").removeClass("hide-in-place");
+  
+  // --- Handle mobile menus position
 
+  var itemLevel1 = window.siteIndex.find(function (item) { return item.id === state.currentBubbleId});
+  if (!itemLevel1) {
+    itemLevel1 = window.siteIndex.find(function (item) { return item.id === state.currentMenuContext});
+    if (!itemLevel1) { throw "error 43987542"; }
+  }
+  var mml1iy = itemLevel1.index * menuMobileH;
+  $("nav.menu-mobile[data-menu-context='site'] .items").css("top", -mml1iy +"px");
+  $("nav.menu-mobile[data-menu-context='site']").removeClass("open");
 
-
-  var bubbleElement = $(".bubble[data-bubble-id='"+ state.currentBubbleId +"']")[0];
-
-  var pagesLevel1 = window.siteIndex.map(function (item) {
-    return item.id;
-  });
-  var indexLevel1 = pagesLevel1.indexOf(state.currentBubbleId);
-  if (indexLevel1 === -1) { throw "error 43987542"; }
-
-  var mml1iy = indexLevel1 * menuMobileH;
-  $("nav.menu-mobile .items").css("top", -mml1iy +"px");
-  $("nav.menu-mobile").removeClass("open");
-
-  var pagesLevel2 = [];
+  var itemLevel2;
   if (state.currentMenuContext !== "site") {
-    var contextualIndex = window.siteIndex.find(function (item) {
-      return item.id === state.currentMenuContext;
-    });
-    pagesLevel2 = contextualIndex.map(function (item) {
-      return item.id;
-    });
+    var contextualIndex = itemLevel1.children;
+    itemLevel2 = contextualIndex.find((item) => item.id === state.currentBubbleId);
+    var mml2iy = itemLevel2.index * menuMobileH;
+    $("nav.menu-mobile[data-menu-context='"+ state.currentMenuContext +"'] .items").css("top", -mml2iy +"px");
+    $("nav.menu-mobile[data-menu-context='"+ state.currentMenuContext +"']").removeClass("open");
   }
 
-}
+  // --- Show/hide arrows level 1
 
-// V1
-// function adjustMobileNavFromState () {
-//   var linkIndex = 0;
-//   var found = false;
-//   $("nav.menu-mobile .menu-item[data-bubble-id]").each(function () {
-//     if (!found && this.dataset.bubbleId === state.currentBubbleId) {
-//       found = true;
-//     }
-//     linkIndex += (found ? 0 : 1);
-//   });
-//   console.log(linkIndex)
-//   var mmiy = linkIndex * menuMobileH;
-//   $("nav.menu-mobile .items").css("top", -mmiy +"px");
-//   $("nav.menu-mobile").removeClass("open");
-//   // console.log(window.menuMeta)
-//   var prevBubbleId = null;
-//   var nextBubbleId = null;
-//   var itemIndex = window.menuMeta.findIndex(function (e) { return e.bubbleId === state.currentBubbleId; });
-//   if (itemIndex === -1) { throw "error 24398752"; }
-//   if (itemIndex > 0) { prevBubbleId = window.menuMeta[itemIndex-1].bubbleId; }
-//   if (itemIndex < window.menuMeta.length - 1) { nextBubbleId = window.menuMeta[itemIndex+1].bubbleId; }
-//   $(".arrow-left")[0].dataset.bubbleId = (prevBubbleId ? prevBubbleId : ""); // CHECKKK
-//   $(".arrow-right")[0].dataset.bubbleId = (nextBubbleId ? nextBubbleId : ""); // CHECKKK
-// }
+  $("a.arrow").removeClass("hide-in-place");
+
+  var currI = itemLevel1.index;
+  if (currI <= 0) { $("a.arrow.arrow-left[data-menu-context='site']").addClass("hide-in-place"); }
+  if (currI >= window.siteIndex.length - 1) { $("a.arrow.arrow-right[data-menu-context='site']").addClass("hide-in-place"); }
+  
+  // --- Show/hide arrows level 2
+
+  if (itemLevel2) {
+    var contextualIndex = itemLevel1.children;
+    var itemLevel2 = contextualIndex.find((item) => item.id === state.currentBubbleId);
+    var currIL2 = itemLevel2.index;
+    if (currIL2 <= 0) { $("a.arrow.arrow-left[data-menu-context='"+ state.currentMenuContext +"']").addClass("hide-in-place"); }
+    if (currIL2 >= contextualIndex.length - 1) { $("a.arrow.arrow-right[data-menu-context='"+ state.currentMenuContext +"']").addClass("hide-in-place"); }
+  }
+
+  // --- Handle mobile links color
+
+  var linkMobileL1 = $("nav.menu-mobile[data-level='1'] .menu-item[data-page-id='"+ itemLevel1.id +"']");
+  $("nav.menu-mobile[data-level='1'] .menu-item").removeClass("active");
+  $(linkMobileL1).addClass("active");
+
+  if (itemLevel2) {
+    var linkMobileL2 = $("nav.menu-mobile[data-level='2'] .menu-item[data-page-id='"+ itemLevel2.id +"']");
+    $("nav.menu-mobile[data-level='2'] .menu-item").removeClass("active");
+    $(linkMobileL2).addClass("active");
+  }
+}
 
 function setFooterAnimation () {
   var footerWrapper = $(".footer .content-wrapper")[0];
@@ -365,8 +267,6 @@ function setFooterAnimation () {
   var fww = footerWrapper.offsetWidth;
   if (footerInterval) { 
     clearInterval(footerInterval); 
-    // footerContent.style.transition = "left 0ms";
-    // footerContent.style.left = "0px";
     footerContent.style.transition = "transform 0ms";
     footerContent.style.transform = "translateX(0px)";
   }
@@ -374,13 +274,10 @@ function setFooterAnimation () {
     var diff = fcw - fww;
     var time = diff * 17;
     var ease = "linear"; // "ease-in-out";
-    console.log(time, "time")
-    // footerContent.style.transition = "left "+ Math.round(time) +"ms "+ ease;
     footerContent.style.transition = "transform "+ Math.round(time) +"ms "+ ease;
     footerCount = 0;
     var move = function () {
       var left = (footerCount % 2 === 0) ? (-diff) : 0;
-      // footerContent.style.left = left + "px";
       footerContent.style.transform = "translateX("+ left + "px)";
       footerCount++;
     }

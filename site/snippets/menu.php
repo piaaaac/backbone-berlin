@@ -35,7 +35,7 @@ nav.menu-mobile[data-menu-context="site"].open {
 
 <nav id="menu-desktop" data-menu-context="site">
   <div class="wrapper">
-    <p style="text-align: left; flex-grow: 1;"><a href="#" data-bubble-id="<?= $landingBubbleId ?>" class="menu-item no-u active">Backbone Berlin</a></p>
+    <p style="text-align: left; flex-grow: 1;"><a href="#" data-bubble-id="<?= $landingBubbleId ?>" data-page-id="<?= $landingBubbleId ?>" class="menu-item no-u active">Backbone Berlin</a></p>
     <?php foreach ($menuItems as $item): 
       $text = $item->menuText()->value();
       $p = $item->menuPage()->toPage();
@@ -81,7 +81,7 @@ nav.menu-mobile[data-menu-context="site"].open {
 
 <nav class="menu-mobile" data-menu-context="site" data-level="1">
   <div class="items">
-    <a href="#" data-bubble-id="<?= $landingBubbleId ?>" class="menu-item no-u active">Backbone Berlin</a>
+    <a href="#" data-bubble-id="<?= $landingBubbleId ?>" data-page-id="<?= $landingBubbleId ?>" class="menu-item no-u active">Backbone Berlin</a>
     <?php foreach ($menuItems as $item): 
       $text = $item->menuText()->value();
       $p = $item->menuPage()->toPage();
@@ -110,7 +110,7 @@ nav.menu-mobile[data-menu-context="site"].open {
   $contId = Str::slug($cont->id());
   $children = $cont->children()->listed();
   ?>
-  <nav class="menu-mobile" data-menu-context="<?= $contId ?>" data-level="2">
+  <nav class="menu-mobile hide-in-place" data-menu-context="<?= $contId ?>" data-level="2">
     <div class="items">
       <?php foreach ($children as $p): 
         $text = $p->title()->value();

@@ -5,7 +5,7 @@ $menuContext = Str::slug($page->parentId() ?? "site");
 
 <div class="bubble" data-bubble-id="<?= $id ?>" data-menu-context="<?= $menuContext ?>">
 
-  <div>menu context: <?= (string)$menuContext ?></div>
+  <!-- <div>menu context: <?= (string)$menuContext ?></div> -->
 
   <?php if ($page->bubbleTitle()->isNotEmpty()): ?>
     <section class="text bubble-title">

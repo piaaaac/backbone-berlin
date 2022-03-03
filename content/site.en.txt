@@ -14,12 +14,12 @@ Menuitems:
   menutext: Sessions 21
 - 
   menupage:
-    - projects-container
+    - projects
   menutext: Projects
 - 
   menupage:
-    - other-container
-  menutext: Other container
+    - more-items
+  menutext: More items
 - 
   menupage:
     - calendar
