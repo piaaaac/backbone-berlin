@@ -1,7 +1,11 @@
 <?php
 $ass = $kirby->url("assets") ."/images";
 $menuItems = $site->menuItems()->toStructure();
-$bgggUrl = $site->bgImages()->toFiles()->shuffle()->first()->url();
+
+$bgggs = $site->bgImages()->toFiles()->filter(function ($file) {
+  return $file->active()->toBool();
+});
+$bgggUrl = $bgggs->shuffle()->first()->url();
 ?>
 
 <?php snippet("header") ?>

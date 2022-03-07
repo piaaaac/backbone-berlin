@@ -1,0 +1,10 @@
+title: Background image
+
+fields:
+  active:
+    type: toggle
+    label: Active
+    default: true
+    text:
+      - "No"
+      - "Yes"

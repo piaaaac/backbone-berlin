@@ -28,11 +28,17 @@ $menu-mobile-h: 42px;
 // Utilities
 // -----------------------------------------------------------------------------
 
+@mixin underline {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10%;
+}
+
 .color-white { color: white; }
 .color-white-50 { color: rgba(white, 0.5); }
 .bg-white { background-color: white; }
 .no-u { text-decoration: none; }
-.u-hover { text-decoration: none; &:hover { text-decoration: underline; } }
+.u-hover { text-decoration: none; &:hover { @include underline; } }
 .pointer { cursor: pointer; }
 .upper { text-transform: uppercase; }
 .lower { text-transform: none; }
@@ -67,11 +73,12 @@ hr {
 }
 
 a {
-  // text-decoration: underline;
-  // text-decoration-thickness: 1px;
-  // text-underline-offset: 10%;
   color: $accent;
   text-decoration: none;
+}
+
+h1 a::after {
+  content: url("../images/arrow-blank.svg");
 }
 
 // -----------------------------------------------------------------------------
@@ -80,8 +87,9 @@ a {
 
 .anchor {
   position: relative;
-  top: -80px;
   height: 0px; width: 10px;
+  top: -60px;
+  @include media-breakpoint-down(sm) { top: -120px; }
 }
 
 // .fade-opacity {
@@ -90,7 +98,7 @@ a {
 
 .hide-in-place {
   opacity: 0; 
-  pointer-events: none;
+  pointer-events: none !important;
 }
 
 @keyframes blink {
@@ -99,6 +107,20 @@ a {
   50% { opacity: 0.3; }
   75% { opacity: 0.5; }
   100%{ opacity: 0.5; }
+}
+
+@keyframes highlight {
+  0%  { background-color: transparent; }
+  25% { background-color: transparent; }
+  50% { background-color: yellow; }
+  75% { background-color: transparent; }
+  100%{ background-color: transparent; }
+}
+
+.highlight-once {
+  animation-name: highlight;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
 }
 
 // -----------------------------------------------------------------------------
@@ -128,6 +150,7 @@ a {
   z-index: 2000;
   position: fixed; left: 0px; top: 0; bottom: 0; width: 1px;
   background-color: $accent;
+  pointer-events: none;
   transition: transform 1500ms;
   transform: translateX(10px);
   transform: translateX(50vw);
@@ -144,15 +167,26 @@ a {
   .bubbles {
     display: flex; align-items: center; justify-content: flex-start;
     transition: transform 2500ms;
+    transition: transform 1800ms;
     .bubble-wrapper {
       display: flex; align-items: center; justify-content: center;
 
-      &[data-level='1'] { width: 100vw; }
-
+      // v2
+      &[data-level='1'] {
+        @include media-breakpoint-down(sm) { width: 150vw; }
+        @include media-breakpoint-up(md)   { width: 100vw; }
+      }
       &[data-level='2'] {
-        @include media-breakpoint-down(sm) { width: 100vw; }
+        @include media-breakpoint-down(sm) { width: 150vw; }
         @include media-breakpoint-up(md)   { padding: 0 40px; }
       }
+
+      // v1
+      // &[data-level='1'] { width: 100vw; }
+      // &[data-level='2'] {
+      //   @include media-breakpoint-down(sm) { width: 100vw; }
+      //   @include media-breakpoint-up(md)   { padding: 0 40px; }
+      // }
 
       .bubble {
 
@@ -181,6 +215,12 @@ a {
           background-color: white;
           padding: $space;
           margin-bottom: #{$space * 2};
+          a[data-submenu-target] {
+            cursor: pointer;
+            &:hover {
+              @include underline;
+            }
+          }
         }
         .text {
           text-align: justify;
@@ -188,7 +228,7 @@ a {
           padding-left: $space;
           &:first-child { padding-top: $space; }
           &:last-child { padding-bottom: $space; }
-          p { padding-left: 60px; }
+          p { margin-left: 60px; }
         }
         .bubble-title {
           margin-bottom: -10px;
@@ -199,7 +239,6 @@ a {
     }
   }
   
-
   @include media-breakpoint-down(sm) {
 
     .bubbles {
@@ -209,18 +248,24 @@ a {
         align-items: flex-start;
         justify-content: center;
         max-height: 100vh;
-        padding: 30vh 0;
+        padding: 40vh 0;
         overflow: scroll;
         pointer-events: auto;
 
         .bubble {
           max-height: none;
           .text {
-            p { padding-left: 30px; }
+            p { margin-left: 30px; }
           }
         }
       }
     }
+  }
+}
+
+.bubbles-group-separator {
+  @include media-breakpoint-up(md) {
+    width: 33vw;
   }
 }
 
@@ -243,7 +288,9 @@ nav#menu-desktop {
   a.menu-item {
     flex-grow: 1;
     text-decoration: none;
+    font-weight: 700;
     &.active, &:hover {
+      @include underline;
       color: $accent;
     }
   }
@@ -264,6 +311,7 @@ nav.desktop-arrows {
     border: 1px solid black;
     border-radius: $border-radius;
     pointer-events: auto;
+    cursor: pointer;
     &.arrow-left::after { 
       content: url("../images/arrow-l.svg");
       line-height: 0;
@@ -272,6 +320,9 @@ nav.desktop-arrows {
       content: url("../images/arrow-r.svg");
       line-height: 0;
     }
+  }
+  &.hide-in-place .arrow {
+    pointer-events: none;
   }
 }
 
@@ -303,9 +354,11 @@ nav.menu-mobile {
       pointer-events: none;
       text-decoration: none;
       display: flex; align-items: center; justify-content: center;
+      font-weight: 700;
       color: black;
       height: $menu-mobile-h;
       &.active, &:hover {
+        @include underline;
         color: $accent;
       }
     }

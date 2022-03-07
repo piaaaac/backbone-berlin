@@ -3,13 +3,10 @@
 ### To do
 
 
-— projects
-
-- ascii as text
-
 - safari resize
 
+- sessions dropdown
 
+- archived pages when open in new tab
 
-$siteIndex = pages structure ordered according to menu
-
+- submenu scroll & highlight content

@@ -2,7 +2,7 @@ Title: Project 4
 
 ----
 
-Bubbletitle: Project 4
+Bubbletitle: project four with a very long title that goes on more than one line
 
 ----
 

@@ -68,4 +68,6 @@ columns:
             # max: 1
             # width: 1/2
             translate: false
-
+            info: "{{ file.active.bool2Text('on ✨', 'off ☁️') }}"
+            uploads:
+              template: bgs

@@ -2,14 +2,6 @@ Title: Archive
 
 ----
 
-Bubbletype: bubble
-
-----
-
-Childrenbubbles: 
-
-----
-
 Bubbletitle: 
 
 ----
@@ -19,7 +11,15 @@ Sectionitems:
 - 
   sectionname: ""
   sectiontext: |
-    # 2020 Lorem ipsum (link: archive target: _blank text: →)
-    # 2020 Vestibulum sit amet pellentesque nibh (link: archive target: _blank text: →)
-    # 2020 Nulla efficitur (link: archive target: _blank text: →)
-    # 2020 Mauris sed turpis (link: archive target: _blank text: →)
+    # 2020 (link: archive target: _blank text: Lorem)
+    # 2020 (link: archive target: _blank text: Vestibulum sit amet pellentesque)
+    # 2020 (link: archive target: _blank text: Nulla effici)
+    # 2020 (link: archive target: _blank text: Mauris sed turpis)
+
+----
+
+Bubbletype: bubble
+
+----
+
+Childrenbubbles: 

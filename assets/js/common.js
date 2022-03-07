@@ -40,11 +40,23 @@ $(document).ready(function () {
 // EVENTS
 // ---------------------------------------------------------------------------
 
-window.addEventListener("resize", function (event) {
+handleResizeStartEnd (function () {
+  // resize start
+}, function () {
+  // resize end
   bubbles = initBubbles();
   gotoBubble(state.currentBubbleId);
   setFooterAnimation();
+}, {
+  "horizontalOnly": true
+  // resizeOptions
 });
+
+// window.addEventListener("resize", function (event) {
+//   bubbles = initBubbles();
+//   gotoBubble(state.currentBubbleId);
+//   setFooterAnimation();
+// });
 
 $("nav .menu-item[data-bubble-id]").click(function () {
   var bubbleId = this.dataset.bubbleId;
@@ -71,13 +83,24 @@ document.addEventListener('keyup', function (event) {
   // console.log(event.key, event.keyCode)
   var key = event.key || event.keyCode;
   if (key === 'ArrowLeft' || key === 'Left' || key === 37) { 
-    $(".arrow-left[data-bubble-id!='']").last().click();
+    // $(".arrow-left[data-bubble-id!='']").last().click();
+    var level = state.currentMenuContext === "site" ? 1 : 2;
+    handleArrowClick("left", state.currentMenuContext, level);
   }
   if (key === 'ArrowRight' || key === 'Right' || key === 39) { 
-    $(".arrow-right[data-bubble-id!='']").last().click();
+    // $(".arrow-right[data-bubble-id!='']").last().click();
+    var level = state.currentMenuContext === "site" ? 1 : 2;
+    handleArrowClick("right", state.currentMenuContext, level);
   }
 });
 
+$("main").click(function () {
+  $("nav.menu-mobile.open").removeClass("open");
+});
+
+$("a[data-submenu-target]").click(function () {
+  scrollToSection(this.dataset.submenuTarget, this.dataset.bubbleId);
+});
 
 // ---------------------------------------------------------------------------
 // FUNCTIONS
@@ -117,7 +140,11 @@ function handleArrowClick (direction, arrowMenuContext, level) {
     }
     var currI = itemLevel1.index;
     var newI = currI + (direction === "left" ? -1 : 1);
-    if (newI < 0 || newI >= window.siteIndex.length) { throw "Error 32895764"; }
+    if (newI < 0 || newI >= window.siteIndex.length) { 
+      // throw "Error 32895764"; 
+      console.log("Alert 32895764");
+      return false;
+    }
     var newIndexItem = window.siteIndex[newI];
     if (newIndexItem.children === null) {
       bubbleId = newIndexItem.id;
@@ -140,7 +167,9 @@ function handleArrowClick (direction, arrowMenuContext, level) {
     var currI = itemLevel2.index;
     var newI = currI + (direction === "left" ? -1 : 1);
     if (newI < 0 || newI >= contextualIndex.length) { 
-      throw "Error 32509867"; 
+      console.log("Alert 32509867");
+      handleArrowClick(direction, "site", 1);
+      return false;
     }
     var newIndexItem = contextualIndex[newI];
     bubbleId = newIndexItem.id;
@@ -176,7 +205,7 @@ function gotoBubble (bubbleId) {
 
   var bbbgw = $(".bbbg").width();
   var bubblesw = $(".bubbles").width();
-  var bbbgx = apMap(bubblex, 0,bubblesw, -200,bbbgw+200);
+  var bbbgx = apMap(bubblex, 0,bubblesw, -10,bbbgw+10);
   var transformBbbg = "translateX("+ -bbbgx +"px)";
   $(".bbbg").css("transform", transformBbbg);
 
@@ -260,6 +289,18 @@ function adjustMobileNavFromState () {
   }
 }
 
+function scrollToSection (submenuTarget, bubbleId) {
+  console.log(submenuTarget, bubbleId);
+  var bubbleEl = $(".bubble[data-bubble-id='"+ bubbleId +"']")[0];
+  var sectionEl = $(bubbleEl).find("[data-section-id='"+ submenuTarget +"']:not(.anchor)")[0];
+  if (!sectionEl) { throw "error 39725698"; }
+  var anchorEl = $(bubbleEl).find(".anchor[data-section-id='"+ submenuTarget +"']")[0];
+  if (!anchorEl) { throw "error 39725628"; }
+  anchorEl.scrollIntoView(true);
+  $("[data-section-id] *").removeClass("highlight-once");
+  $(sectionEl).find("p, h1, h2, h3, h4, h5, h6").addClass("highlight-once");
+}
+
 function setFooterAnimation () {
   var footerWrapper = $(".footer .content-wrapper")[0];
   var footerContent = $(".footer .content")[0];
@@ -307,3 +348,4 @@ function showTime(){
   document.getElementById("time").textContent = time;
   setTimeout(showTime, 1000);
 }
+

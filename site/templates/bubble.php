@@ -18,7 +18,7 @@ $menuContext = Str::slug($page->parentId() ?? "site");
       <?php foreach ($page->sectionItems()->toStructure() as $section): 
         $slug = $section->sectionName()->slug();
         ?>
-        <a class="mr-2" href="#<?= $slug ?>"><?= $section->sectionName()->kti() ?></a>
+        <a class="mr-2" data-submenu-target="<?= $slug ?>" data-bubble-id="<?= $id ?>"><strong><?= $section->sectionName()->kti() ?></strong></a>
       <?php endforeach ?>
     </section>
   <?php endif ?>
@@ -34,8 +34,8 @@ $menuContext = Str::slug($page->parentId() ?? "site");
   <?php foreach ($page->sectionItems()->toStructure() as $section): 
     $slug = $section->sectionName()->slug();
     ?>
-    <section class="text">
-      <div class="anchor" id="<?= $slug ?>"></div>
+    <section class="text" data-section-id="<?= $slug ?>">
+      <div class="anchor" data-section-id="<?= $slug ?>"></div>
       <?= $section->sectionText()->kt() ?>
     </section>
   <?php endforeach ?>

@@ -13,3 +13,11 @@ function kill ($var, $continue = false) {
 }
 
 
+Kirby::plugin("your/plugin", [
+  "fieldMethods" => [
+    "bool2Text" => function ($field, $y = "Yeppp", $n = "Nooope") {
+      $field->value = $field->bool() ? $y : $n;
+      return $field; 
+    }
+  ]
+]);

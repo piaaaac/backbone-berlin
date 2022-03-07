@@ -71,6 +71,7 @@ foreach ($menuItems as $item) {
 </head>
 
 <body>
-  <main>
 
   <?php snippet("menu") ?>
+  
+  <main>

@@ -35,6 +35,31 @@ Menuitems:
 
 ----
 
+Footertext: **Next meeting** 14/15/16 March 2022 @ Lorem ipsum dolor sit - Am Wriezener bhf, 10243 Berlin, Germany
+
+----
+
+Socialdescription: 
+
+----
+
+Socialimage:
+
+- copy.png
+
+----
+
+Bgimages:
+
+- backbone_svg-6.svg
+- backbone_svg-4.svg
+- backbone_svg-2.svg
+- backbone_svg-3.svg
+- backbone_svg-1.svg
+- backbone_svg-5.svg
+
+----
+
 Asciibgs:
 
 - 
@@ -79,28 +104,6 @@ Asciibgs:
     123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
     1
     1
-
-----
-
-Footertext: **Next meeting** 14/15/16 March 2022 @ Lorem ipsum dolor sit - Am Wriezener bhf, 10243 Berlin, Germany
-
-----
-
-Socialdescription: 
-
-----
-
-Socialimage:
-
-- copy.png
-
-----
-
-Bgimages:
-
-- bbbg1.svg
-- bbbg2.svg
-- bbbg3.svg
 
 ----
 
