@@ -1,8 +1,22 @@
 <?php
 $id = Str::slug($page->id());
-$menuContext = Str::slug($page->parentId() ?? "site");
+// $menuContext = Str::slug($page->parentId() ?? "site");
+
+// -----------------------------------------
+// SPECIAL CASES
+// -----------------------------------------
+
+$bubbleType = "b-default";
+
+if ($id === "sessions-21") { $bubbleType = "b-sessions-21"; }
+
+echo snippet("bubbles/$bubbleType", ["bubble" => $page]);
+
 ?>
 
+
+<?php
+/*
 <div class="bubble" data-bubble-id="<?= $id ?>" data-menu-context="<?= $menuContext ?>">
 
   <!-- <div>menu context: <?= (string)$menuContext ?></div> -->
@@ -40,3 +54,5 @@ $menuContext = Str::slug($page->parentId() ?? "site");
     </section>
   <?php endforeach ?>
 </div>
+*/
+?>

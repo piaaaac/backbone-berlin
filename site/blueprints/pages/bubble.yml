@@ -6,6 +6,7 @@ fields:
   # v1
   bubbleTitle:
     type: text
+    label: Displayed bubble title
 
   sectionItems:
     type: structure

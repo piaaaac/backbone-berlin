@@ -35,20 +35,6 @@ Menuitems:
 
 ----
 
-Footertext: **Next meeting** 14/15/16 March 2022 @ Lorem ipsum dolor sit - Am Wriezener bhf, 10243 Berlin, Germany
-
-----
-
-Socialdescription: 
-
-----
-
-Socialimage:
-
-- copy.png
-
-----
-
 Bgimages:
 
 - backbone_svg-6.svg
@@ -57,6 +43,33 @@ Bgimages:
 - backbone_svg-3.svg
 - backbone_svg-1.svg
 - backbone_svg-5.svg
+
+----
+
+Footertext: **Next meeting** 14/15/16 March 2022 @ Lorem ipsum dolor sit - Am Wriezener bhf, 10243 Berlin, Germany
+
+----
+
+Socialdescription: Backbone is a social project for the city of Berlin
+
+----
+
+Socialimage:
+
+- 03.2-copy-63.png
+
+----
+
+Sessions21-tags:
+
+- 
+  s21text: group
+- 
+  s21text: community
+- 
+  s21text: organisation
+- 
+  s21text: meetings
 
 ----
 

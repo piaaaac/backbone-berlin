@@ -10,7 +10,7 @@ Sectionitems:
 
 - 
   sectionname: ""
-  sectiontext: '# *Backbone* is a Berlin based group that promotes activities of research, co-creation and activism ✊🏼 around the implications of working as performative artists today.'
+  sectiontext: '# *Backbone* is a Berlin based group that promotes <ins>activities of *research*</ins>, co-creation and activism ✊🏼 around the implications of working as performative artists today.'
 
 ----
 

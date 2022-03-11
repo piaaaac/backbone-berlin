@@ -10,6 +10,7 @@ return [
   "name" => "English",
   "translations" => [
     "current-time" => "Current time",
+    "back" => "Back",
   ],
   "url" => NULL
 ];

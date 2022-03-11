@@ -1,73 +1,80 @@
 title: Site
 unlisted: true
 
-columns:
-  - 1/1:
-    sections:
+tabs:
 
-      pages:
-        type: pages
+  tab_site:
+    label: Site
+    columns:
+      - 1/1:
+        sections:
 
-      meta:
-        type: fields
-        fields:
+          pages:
+            type: pages
+            create:
+              - bubble
+              - container
 
-          menuItems:
-            type: structure
-            label: Menu items
+          meta:
+            type: fields
             fields:
-              menuPage:
+
+              menuItems:
+                type: structure
+                label: Menu items
+                fields:
+                  menuPage:
+                    width: 1/2
+                    type: pages
+                    min: 1
+                    max: 1
+                    # translate: false
+                  menuText:
+                    width: 1/2
+                    type: text
+
+              bgImages:
+                type: files
+                min: 1
+                translate: false
+                info: "{{ file.active.bool2Text('on ✨', 'off ☁️') }}"
+                uploads:
+                  template: bgs
+
+              footerText:
+                type: text
+              
+              socialDescription:
+                type: textarea
                 width: 1/2
-                type: pages
+              
+              socialImage:
+                type: files
                 min: 1
                 max: 1
-                # translate: false
-              menuText:
+                help: "Un'immagine di 1200x630 px"
                 width: 1/2
-                type: text
+                translate: false
 
-          # asciiBgs:
-          #   type: structure
-          #   label: ASCII backgrounds
-          #   fields:
-          #     lines:
-          #       type: number
-          #       width: 1/2
-          #       translate: false
-          #     columns:
-          #       type: number
-          #       width: 1/2
-          #       translate: false
-          #     ascii:
-          #       type: textarea
-          #       translate: false
+              # cookieBanner:
+              #   label: Cookie banner text
+              #   type: textarea
+              #   width: 1/2
+              
+  tab_sessions21:
+    label: Sessions 21
+    columns:
+      - 1/1:
+        sections:
 
-          footerText:
-            type: text
-          
-          socialDescription:
-            type: textarea
-            width: 1/2
-          
-          socialImage:
-            type: files
-            min: 1
-            max: 1
-            help: "Un'immagine di 1200x630 px"
-            width: 1/2
-            translate: false
+          tab_sessions21_fields:
+            type: fields
+            fields:
 
-          # cookieBanner:
-          #   label: Cookie banner text
-          #   type: textarea
-          #   width: 1/2
-          
-          bgImages:
-            type: files
-            min: 1
-            # max: 1
-            # width: 1/2
-            translate: false
-            info: "{{ file.active.bool2Text('on ✨', 'off ☁️') }}"
-            uploads:
-              template: bgs
+              sessions21_tags:
+                label: "Tags (language: {{kirby.language.code}})"
+                type: structure
+                fields:
+                  s21Text:
+                    label: Text to search
+                    type: text

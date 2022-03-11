@@ -2,14 +2,6 @@ Title: Sessions 21
 
 ----
 
-Bubbletype: bubble
-
-----
-
-Childrenbubbles: 
-
-----
-
 Bubbletitle: Sessions 2021
 
 ----
@@ -19,8 +11,6 @@ Sectionitems:
 - 
   sectionname: ""
   sectiontext: |
-    [ SELECT A TOPIC v ]
-    
     in-----------------------------------------------------------------------
     INTRO BACKBONE
     
@@ -722,3 +712,11 @@ Sectionitems:
     
     To stay informed about Constant infrastructures, please subscribe to this mailinglist: https://tumulte.domainepublic.net/cgi-bin/mailman/listinfo/infrastructures
     More about the way pads work: https://pad.constantvzw.org/p/etherpads
+
+----
+
+Bubbletype: bubble
+
+----
+
+Childrenbubbles: 

@@ -3,6 +3,16 @@
 // ---------------------------------------------------------------------------
 
 /**
+ * Opens a popup (browser window) in the center of the screen
+ * 
+ * */
+function popupCenter (url, title, w, h) {
+  var left = (screen.width/2)-(w/2);
+  var top = (screen.height/2)-(h/2);
+  return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+} 
+
+/**
  *  via p5 code
  *  https://github.com/processing/p5.js/blob/master/src/math/calculation.js
  *  dependency: apConstrain

@@ -35,18 +35,31 @@ Menuitems:
 
 ----
 
-Asciibgs:
-
-- [ ]
-- [ ]
-
-----
-
 Footertext: **Nechste meeting** 14/15/16 March 2022 @ Lorem ipsum dolor sit - Am Wriezener bhf, 10243 Berlin, Germany
 
 ----
 
 Socialdescription: 
+
+----
+
+Sessions21-tags:
+
+- 
+  s21text: und
+- 
+  s21text: wie
+- 
+  s21text: auch
+- 
+  s21text: nicht
+
+----
+
+Asciibgs:
+
+- [ ]
+- [ ]
 
 ----
 

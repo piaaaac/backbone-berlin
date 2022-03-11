@@ -48,7 +48,23 @@ nav.menu-mobile[data-menu-context="site"].open {
       ?>
       <p style="text-align: right; flex-grow: 1;"><a class="menu-item" href="#" data-bubble-id="<?= $bubbleId ?>" data-page-id="<?= $pageId ?>"><?= $text ?></a></p>
     <?php endforeach ?>
-    <?php foreach($kirby->languages() as $language): 
+
+
+    <?php 
+    $langLinks = [];
+    foreach ($kirby->languages()->flip() as $language) {
+      $active = ($kirby->language()->code() == $language->code()) ? " active-lang" : "";
+      $langLinks[] = '<a href="'. $language->url() .'" hreflang="'. $language->code() .'" class="menu-item upper no-u'. $active .'">'. html($language->code()) .'</a>';
+    }
+    ?>
+    <p style="text-align: right; flex-grow: 1;">
+      <?= implode(" ",$langLinks) ?>
+    </p>
+
+
+    <?php 
+    /*
+    foreach($kirby->languages() as $language): 
       if ($kirby->language() == $language) continue;
       ?>
       <p style="text-align: right; flex-grow: 1;">
@@ -56,7 +72,11 @@ nav.menu-mobile[data-menu-context="site"].open {
           <?= html($language->name()) ?>
         </a>
       </p>
-    <?php endforeach ?>
+    <?php endforeach 
+    */
+    ?>
+
+
   </div>
 </nav>
 
@@ -94,11 +114,41 @@ nav.menu-mobile[data-menu-context="site"].open {
       ?>
       <a class="menu-item" href="#" data-bubble-id="<?= $bubbleId ?>" data-page-id="<?= $pageId ?>"><?= $text ?></a>
     <?php endforeach ?>
-    <?php foreach($kirby->languages() as $language): 
+
+    <?php 
+    /*
+    $langLinks = [];
+    foreach ($kirby->languages()->flip() as $language) {
+      $active = ($kirby->language()->code() == $language->code()) ? " active-lang" : "";
+      $langLinks[] = '<a href="'. $language->url() .'" hreflang="'. $language->code() .'" class="menu-item d-inline upper no-u'. $active .'">'. html($language->code()) .'</a>';
+    }
+    ?>
+    <p style="text-align: right; flex-grow: 1;">
+      <?= implode(" ",$langLinks) ?>
+    </p>
+    */
+    ?>
+
+    <?php 
+    $currCode = $kirby->language()->code();
+    $pieces = $kirby->languages()->flip()->toArray(function ($l) use ($currCode) { 
+      $active = ($currCode == $l->code()) ? "underline color-accent" : "";
+      $code = $l->code();
+      return '<span class="'. $active .'">'. $code .'</span>';
+    });
+    $str = implode("&nbsp;", $pieces);
+    /*
+    */
+    foreach($kirby->languages() as $language): 
       if ($kirby->language() == $language) continue;
       ?>
-      <a href="<?= $language->url() ?>" hreflang="<?= $language->code() ?>" class="menu-item no-u"><?= html($language->name()) ?></a>
-    <?php endforeach ?>
+      <a href="<?= $language->url() ?>" hreflang="<?= $language->code() ?>" class="menu-item upper no-u">
+        <?= $str ?>
+        <!-- <?= html($language->name()) ?> -->
+      </a>
+    <?php endforeach 
+    ?>
+
   </div>
   <a class="arrow arrow-left" data-direction="left" data-menu-context="site" data-level="1"></a>
   <a class="arrow arrow-right" data-direction="right" data-menu-context="site" data-level="1"></a>

@@ -13,7 +13,7 @@ return [
   "whoops" => true,
   "languages" => true,
 
-  // "routes" => require_once 'routes.php',
+  "routes" => require_once 'routes.php',
 
   // "hooks" => require_once "hooks.php", // currently []
   
@@ -27,8 +27,9 @@ return [
   "pedroborges.meta-tags.default" => function ($page, $site) {
 
     // default
+    $socialUrl = $site->url();
     $socialTitle = $site->title();
-    $socialDesc = $site->description();
+    $socialDesc = $site->socialDescription();
     
     $socialImgUrl = "";
     if ($site->socialImage()->isNotEmpty()) {
@@ -48,7 +49,7 @@ return [
         'title'       => $socialTitle,
         'site_name'   => $socialTitle,
         'image'       => $socialImgUrl,
-        'url'         => $page->url(),
+        'url'         => $socialUrl,
         'description' => $socialDesc,
       ],
       'twitter' => [

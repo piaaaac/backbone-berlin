@@ -11,7 +11,15 @@ Sectionitems:
 - 
   sectionname: ""
   sectiontext: |
-    # 2020 Lorem ipsum (link: archive target: _blank text: →)
-    # 2020 Vestibulum sit amet pellentesque nibh (link: archive target: _blank text: →)
-    # 2020 Nulla efficitur (link: archive target: _blank text: →)
-    # 2020 Mauris sed turpis (link: archive target: _blank text: →)
+    # 2021 (link: archived/old-project-two target: _blank text: Vestibulum sit amet pellentesque)
+    # 2020 (link: archived/old-project-about-migration-in-europe target: _blank text: Hearts and minds: how europeans think and feel about immigration)
+    # 2020 (link: archived/old-project-three target: _blank text: Nulla effici)
+    # 2020 (link: archived/old-project-four target: _blank text: Mauris sed turpis)
+
+----
+
+Bubbletype: bubble
+
+----
+
+Childrenbubbles: 

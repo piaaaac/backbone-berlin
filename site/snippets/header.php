@@ -72,6 +72,4 @@ foreach ($menuItems as $item) {
 
 <body>
 
-  <?php snippet("menu") ?>
   
-  <main>

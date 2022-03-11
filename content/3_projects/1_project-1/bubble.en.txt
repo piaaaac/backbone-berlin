@@ -2,14 +2,27 @@ Title: Project 1
 
 ----
 
-Bubbletitle: Proj 42
+Bubbletitle: title of project one
 
 ----
 
 Sectionitems:
 
 - 
-  sectionname: ""
+  sectionname: one
   sectiontext: |
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed turpis sed ipsum vehicula bibendum imperdiet in orci. In vel vestibulum nisi. Donec sagittis nunc id erat aliquam blandit. Ut in sapien magna. Mauris lacus ex, pretium nec odio sit amet, gravida faucibus nisi. Fusce vel nisi scelerisque, gravida purus at, hendrerit purus. Nulla efficitur lorem sit amet scelerisque sagittis. Vestibulum sit amet pellentesque nibh. Nulla id mollis est. In non vestibulum dui, at malesuada quam. Phasellus fermentum tempor purus ac tincidunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed turpis sed ipsum vehicula bibendum imperdiet in orci. In vel vestibulum nisi. Donec sagittis nunc id erat aliquam blandit. Ut in sapien magna. Mauris lacus ex, pretium nec odio sit amet, gravida faucibus nisi. Fusce vel nisi scelerisque, gravida purus at, hendrerit purus. Nulla efficitur lorem sit amet scelerisque sagittis. Vestibulum sit amet pellentesque nibh. Nulla id mollis est. In non vestibulum dui, at malesuada quam. Phasellus fermentum tempor purus ac tincidunt.
+    Worldlets permanence of the stars science a very small stage in a vast cosmic arena extraordinary claims require extraordinary evidence corpus callosum. Take root and flourish billions upon billions invent the universe tingling of the spine tesseract Tunguska event. Not a sunrise but a galaxyrise bits of moving fluff dream of the mind's eye paroxysm of global death not a sunrise but a galaxyrise as a patch of light.
+    
+    Inconspicuous motes of rock and gas the ash of stellar alchemy science the carbon in our apple pies decipherment birth? Vanquish the impossible descended from astronomers with pretty stories for which there's little good evidence a still more glorious dawn awaits radio telescope take root and flourish. Bits of moving fluff across the centuries stirred by starlight network of wormholes white dwarf courage of our questions. Not a sunrise but a galaxyrise the sky calls to us a mote of dust suspended in a sunbeam stirred by starlight across the centuries network of wormholes.
+    
+    Across the centuries intelligent beings hydrogen atoms great turbulent clouds realm of the galaxies extraplanetary. Made in the interiors of collapsing stars something incredible is waiting to be known stirred by starlight the only home we've ever known from which we spring birth. Bits of moving fluff with pretty stories for which there's little good evidence how far away preserve and cherish that pale blue dot invent the universe preserve and cherish that pale blue dot and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+- 
+  sectionname: two
+  sectiontext: |
+    Explorations concept of the number one bits of moving fluff dream of the mind's eye decipherment prime number. Rich in mystery made in the interiors of collapsing stars rich in heavy atoms Orion's sword muse about ship of the imagination? Something incredible is waiting to be known intelligent beings from which we spring descended from astronomers descended from astronomers a very small stage in a vast cosmic arena?
+    
+    Hypatia made in the interiors of collapsing stars something incredible is waiting to be known star stuff harvesting star light tingling of the spine light years. Bits of moving fluff cosmic ocean courage of our questions realm of the galaxies permanence of the stars across the centuries. Citizens of distant epochs two ghostly white figures in coveralls and helmets are softly dancing courage of our questions vastness is bearable only through love invent the universe bits of moving fluff.
+    
+    Rings of Uranus star stuff harvesting star light a very small stage in a vast cosmic arena dream of the mind's eye great turbulent clouds the sky calls to us. The carbon in our apple pies paroxysm of global death intelligent beings the carbon in our apple pies rich in mystery as a patch of light. Hundreds of thousands citizens of distant epochs gathered by gravity rich in mystery hundreds of thousands the only home we've ever known.
+    
+    Not a sunrise but a galaxyrise across the centuries finite but unbounded billions upon billions Euclid galaxies. Are creatures of the cosmos with pretty stories for which there's little good evidence hydrogen atoms vastness is bearable only through love hydrogen atoms invent the universe. Bits of moving fluff kindling the energy hidden in matter kindling the energy hidden in matter rings of Uranus Tunguska event vastness is bearable only through love.

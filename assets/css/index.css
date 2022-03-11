@@ -219,7 +219,8 @@ h2 {
   line-height: 1.2em;
   font-weight: 400;
   font-style: normal;
-  font-stretch: normal; }
+  font-stretch: normal;
+  font-weight: 700; }
   @media (min-width: 576px) {
     h2 {
       font-size: 16px; } }
@@ -240,7 +241,8 @@ h3 {
   line-height: 1.2em;
   font-weight: 400;
   font-style: normal;
-  font-stretch: normal; }
+  font-stretch: normal;
+  font-weight: 700; }
   @media (min-width: 576px) {
     h3 {
       font-size: 16px; } }
@@ -316,6 +318,10 @@ h6 {
   @media (min-width: 1200px) {
     h6 {
       font-size: 18px; } }
+
+ul {
+  margin-left: 90px;
+  margin-bottom: 1em; }
 
 /* 
 .block-sans-s,
@@ -499,8 +505,16 @@ label {
   .hamburger--slider.is-active .hamburger-inner::after {
     transform: translate3d(0, -14px, 0) rotate(-90deg); }
 
+.underline {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10%; }
+
 .color-white {
   color: white; }
+
+.color-accent {
+  color: blue; }
 
 .color-white-50 {
   color: rgba(255, 255, 255, 0.5); }
@@ -581,8 +595,29 @@ a {
   color: blue;
   text-decoration: none; }
 
-h1 a::after {
+h1 a[target='_blank']::after {
   content: url("../images/arrow-blank.svg"); }
+
+.styled-select {
+  position: relative; }
+  .styled-select select {
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    appearance: none;
+    height: 42px;
+    border: 1px solid black;
+    padding: 0 15px;
+    border-radius: 3px;
+    color: blue;
+    min-width: 100%; }
+  .styled-select::after {
+    content: url("../images/arrow-d.svg");
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    pointer-events: none; }
 
 .anchor {
   position: relative;
@@ -619,10 +654,37 @@ h1 a::after {
     background-color: transparent; }
   100% {
     background-color: transparent; } }
+@keyframes walk {
+  0% {
+    transform: translateX(5px); }
+  50% {
+    transform: translateX(calc(100vw - 5px)); }
+  100% {
+    transform: translateX(5px); } }
 .highlight-once {
   animation-name: highlight;
   animation-duration: 3s;
   animation-iteration-count: 1; }
+
+.single-arrow {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 3px;
+  pointer-events: auto;
+  cursor: pointer;
+  min-width: 35px;
+  max-width: 35px;
+  min-height: 35px;
+  max-height: 35px;
+  display: inline-flex;
+  border: 0; }
+  .single-arrow img {
+    line-height: 0; }
 
 .bbbg-wrap {
   position: fixed;
@@ -658,6 +720,11 @@ h1 a::after {
   transform: translateX(10px);
   transform: translateX(50vw);
   transform: translateX(100vw); }
+  .line.walk {
+    animation-name: walk;
+    animation-duration: 18s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; }
 
 .screen {
   z-index: 10;
@@ -684,7 +751,9 @@ h1 a::after {
       justify-content: center; }
       @media (max-width: 767.98px) {
         .screen .bubbles .bubble-wrapper[data-level='1'] {
-          width: 150vw; } }
+          width: 150vw; }
+          .screen .bubbles .bubble-wrapper[data-level='1'].single-bubble {
+            width: 100vw; } }
       @media (min-width: 768px) {
         .screen .bubbles .bubble-wrapper[data-level='1'] {
           width: 100vw; } }
@@ -758,6 +827,26 @@ h1 a::after {
   .bubbles-group-separator {
     width: 33vw; } }
 
+nav.menu-custom {
+  z-index: 16;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  nav.menu-custom a {
+    font-weight: 700;
+    color: black; }
+    nav.menu-custom a.active, nav.menu-custom a:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 10%;
+      color: blue; }
+
 nav#menu-desktop {
   z-index: 6;
   position: fixed;
@@ -780,7 +869,7 @@ nav#menu-desktop {
     flex-grow: 1;
     text-decoration: none;
     font-weight: 700; }
-    nav#menu-desktop a.menu-item.active, nav#menu-desktop a.menu-item:hover {
+    nav#menu-desktop a.menu-item.active, nav#menu-desktop a.menu-item.active-lang, nav#menu-desktop a.menu-item:hover {
       text-decoration: underline;
       text-decoration-thickness: 2px;
       text-underline-offset: 10%;
@@ -806,12 +895,17 @@ nav.desktop-arrows {
     height: 42px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-color: white;
     border: 1px solid black;
     border-radius: 3px;
     pointer-events: auto;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: transform 150ms; }
+    nav.desktop-arrows .arrow img {
+      line-height: 0; }
+    nav.desktop-arrows .arrow:hover {
+      transform: scale(1.1); }
     nav.desktop-arrows .arrow.arrow-left::after {
       content: url("../images/arrow-l.svg");
       line-height: 0; }
@@ -853,7 +947,7 @@ nav.menu-mobile {
       font-weight: 700;
       color: black;
       height: 42px; }
-      nav.menu-mobile .items a.menu-item.active, nav.menu-mobile .items a.menu-item:hover {
+      nav.menu-mobile .items a.menu-item.active, nav.menu-mobile .items a.menu-item.active-lang, nav.menu-mobile .items a.menu-item:hover {
         text-decoration: underline;
         text-decoration-thickness: 2px;
         text-underline-offset: 10%;

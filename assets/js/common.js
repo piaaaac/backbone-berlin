@@ -52,12 +52,6 @@ handleResizeStartEnd (function () {
   // resizeOptions
 });
 
-// window.addEventListener("resize", function (event) {
-//   bubbles = initBubbles();
-//   gotoBubble(state.currentBubbleId);
-//   setFooterAnimation();
-// });
-
 $("nav .menu-item[data-bubble-id]").click(function () {
   var bubbleId = this.dataset.bubbleId;
   gotoBubble(bubbleId);
@@ -100,6 +94,12 @@ $("main").click(function () {
 
 $("a[data-submenu-target]").click(function () {
   scrollToSection(this.dataset.submenuTarget, this.dataset.bubbleId);
+});
+
+$("a[target='_blank']").click(function () {
+  console.log(this.href)
+  popupCenter(this.href, "BB::Archive", window.innerWidth*0.6, window.innerHeight*0.7);
+  return false;
 });
 
 // ---------------------------------------------------------------------------
@@ -215,8 +215,9 @@ function gotoBubble (bubbleId) {
   if (breakpointIs("md", "up")) {
     linex = $(linkDesktop).offset().left - 5;
   } else {
+    var minBubblex = bubbles.map(e => e.x).reduce((a, b) => { return Math.min(a, b) });
     var maxBubblex = bubbles.map(e => e.x).reduce((a, b) => { return Math.max(a, b) });
-    linex = apMap(bubblex, 0,maxBubblex, 7.5,window.innerWidth-7.5);
+    linex = apMap(bubblex, minBubblex,maxBubblex, 7.5,window.innerWidth-7.5);
   }
   var transformLine = "translateX("+ linex +"px)";
   $(".line").css("transform", transformLine);

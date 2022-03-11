@@ -33,8 +33,24 @@ $menu-mobile-h: 42px;
   text-decoration-thickness: 2px;
   text-underline-offset: 10%;
 }
+.underline {
+  @include underline;
+}
+
+@mixin single-arrow {
+  width: $menu-mobile-h;
+  height: $menu-mobile-h;
+  display: flex; align-items: center; justify-content: center;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: $border-radius;
+  pointer-events: auto;
+  cursor: pointer;
+  img { line-height: 0; }
+}
 
 .color-white { color: white; }
+.color-accent { color: $accent; }
 .color-white-50 { color: rgba(white, 0.5); }
 .bg-white { background-color: white; }
 .no-u { text-decoration: none; }
@@ -77,8 +93,30 @@ a {
   text-decoration: none;
 }
 
-h1 a::after {
+h1 a[target='_blank']::after {
   content: url("../images/arrow-blank.svg");
+}
+
+.styled-select {
+  position: relative;
+  select {
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+    height: $menu-mobile-h;
+    border: 1px solid black;
+    padding: 0 $space;
+    border-radius: $border-radius;
+    color: blue;
+    min-width: 100%;
+  }
+  &::after {
+    content: url("../images/arrow-d.svg");
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    pointer-events: none;
+  }
 }
 
 // -----------------------------------------------------------------------------
@@ -117,10 +155,26 @@ h1 a::after {
   100%{ background-color: transparent; }
 }
 
+@keyframes walk {
+  0%  { transform: translateX(5px); }
+  50% { transform: translateX(calc(100vw - 5px)); }
+  100%{ transform: translateX(5px); }
+}
+
 .highlight-once {
   animation-name: highlight;
   animation-duration: 3s;
   animation-iteration-count: 1;
+}
+
+.single-arrow {
+  @include single-arrow;
+  min-width: 35px;
+  max-width: 35px;
+  min-height: 35px;
+  max-height: 35px;
+  display: inline-flex;
+  border: 0;
 }
 
 // -----------------------------------------------------------------------------
@@ -155,6 +209,12 @@ h1 a::after {
   transform: translateX(10px);
   transform: translateX(50vw);
   transform: translateX(100vw);
+  &.walk {
+    animation-name: walk;
+    animation-duration: 18s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
 }
 
 .screen {
@@ -173,7 +233,10 @@ h1 a::after {
 
       // v2
       &[data-level='1'] {
-        @include media-breakpoint-down(sm) { width: 150vw; }
+        @include media-breakpoint-down(sm) { 
+          width: 150vw; 
+          &.single-bubble { width: 100vw; }
+        }
         @include media-breakpoint-up(md)   { width: 100vw; }
       }
       &[data-level='2'] {
@@ -273,6 +336,23 @@ h1 a::after {
 // SPECIFIC
 // -----------------------------------------------------------------------------
 
+nav.menu-custom {
+  z-index: 16;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: $menu-h;
+  padding: 0 $space; 
+  display: flex; align-items: center; justify-content: space-between;
+  a {
+    font-weight: 700;
+    color: black;
+    &.active, &:hover {
+      @include underline;
+      color: $accent;
+    }
+  }
+}
+
 nav#menu-desktop {
   z-index: 6;
   @include media-breakpoint-down(sm) { display: none; }
@@ -289,7 +369,7 @@ nav#menu-desktop {
     flex-grow: 1;
     text-decoration: none;
     font-weight: 700;
-    &.active, &:hover {
+    &.active, &.active-lang, &:hover {
       @include underline;
       color: $accent;
     }
@@ -304,14 +384,11 @@ nav.desktop-arrows {
   padding: $space;
   pointer-events: none;
   .arrow {
-    width: $menu-mobile-h;
-    height: $menu-mobile-h;
-    display: flex; align-items: center; justify-content: space-between;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: $border-radius;
-    pointer-events: auto;
-    cursor: pointer;
+    @include single-arrow;
+    transition: transform 150ms;
+    &:hover { 
+      transform: scale(1.1);
+    }
     &.arrow-left::after { 
       content: url("../images/arrow-l.svg");
       line-height: 0;
@@ -357,7 +434,7 @@ nav.menu-mobile {
       font-weight: 700;
       color: black;
       height: $menu-mobile-h;
-      &.active, &:hover {
+      &.active, &.active-lang, &:hover {
         @include underline;
         color: $accent;
       }

@@ -45,11 +45,13 @@ h1 {
   text-align: left;
   &:first-of-type { margin-top: -0.15em; }
 }
-h2 { @include font-sans-m; }
-h3 { @include font-sans-m; }
+h2 { @include font-sans-m; font-weight: 700; }
+h3 { @include font-sans-m; font-weight: 700; }
 h4 { @include font-sans-m; }
 h5 { @include font-sans-m; }
 h6 { @include font-sans-m; }
+
+ul { margin-left: 90px; margin-bottom: 1em; }
 
 // -----------------------------------------------------------------------------
 // Block styles

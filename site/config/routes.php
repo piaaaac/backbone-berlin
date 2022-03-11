@@ -1,132 +1,72 @@
 <?php
 
-
-// --- V2
-
 return [
 
   [
-    'pattern' => '/video-modal/(:any)',
-    'action'  => function($vimeoId) {
-      return snippet("bits/video-player", ["vimeoId" => $vimeoId], true);
+    "pattern" => "/archived/(:any)",
+    "language" => "*",
+    "action"  => function ($language, $bubblePageId) {
+
+      $p = page($bubblePageId);
+      
+      if (!isset($p) || !$p) { 
+        return "<html><body>Page not found: $bubblePageId</body></html>";
+      }
+      
+      // return new Page([
+      //   "slug" => $bubblePageId,
+      //   "template" => "single-bubble",
+      //   "content" => $p->content()->toArray(),
+      // ]);
+      
+      $vp = new Page([
+        "slug" => $bubblePageId,
+        "template" => "single-bubble",
+        "content" => $p->content()->toArray(),
+      ]);
+
+      return site()->visit($vp, $language);
+
     }
   ],
-
   [
-    'pattern' => '/audio-modal/(:any)',
-    'action'  => function($itemIndex) {
-      return snippet("bits/audio-player", ["itemIndex" => $itemIndex], true);
+    "pattern" => "/archived/(:any)",
+    "action"  => function ($bubblePageId) {
+
+      $lang = kirby()->session()->get("lang", "en");
+      $url = "/$lang/archived/$bubblePageId";
+      go($url);
+
+      // return "<html><body>$bubblePageId</body></html>";
     }
   ],
 
+  // [
+  //   "pattern" => "/archived/(:any)",
+  //   "action"  => function ($bubblePageId) {
 
+  //     $p = page($bubblePageId);
+  //     $lang = kirby()->session()->get("lang", "en");
+      
+  //     if (!isset($p) || !$p) { 
+  //       return "<html><body>Page not found: $bubblePageId</body></html>";
+  //     }
+      
+  //     // return new Page([
+  //     //   "slug" => $bubblePageId,
+  //     //   "template" => "single-bubble",
+  //     //   "content" => $p->content()->toArray(),
+  //     // ]);
+      
+  //     $vp = new Page([
+  //       "slug" => $bubblePageId,
+  //       "template" => "single-bubble",
+  //       "content" => $p->content()->toArray(),
+  //     ]);
 
+  //     return site()->visit($vp, $lang);
 
-  /**
-   * @param $encodedImgUrl (string) relative to $site->url()
-   * 
-   * Example:
-   * dither/media/pages/speakers/dame-wendy-hall/0ef7394063-1639416861/bitmap-copy-300x300-crop-300-bw-q70.jpg
-   * 
-   * */
-  [
-    'pattern' => '/dither/(:all)',
-    'action'  => function($imgUrl) {
-      return new Response(dither($imgUrl), 'image/png');
-    }
-  ],
+  //   }
+  // ],
 
-
-
-
-  // LOW route
-  // ---------
-
-  [
-    'pattern' => '/low',
-    'action'  => function() {
-      Config::set("low-energy-mode", true);
-      return site()->visit(page("home"));
-    }
-  ],
-
-  [
-    'pattern' => '/low/(:all)',
-    'action'  => function($uid) {
-      Config::set("low-energy-mode", true);
-      $page = page($uid);
-      if (!$page) $page = site()->errorPage();
-      return site()->visit($page);
-    }
-  ],
-
-  // REG route
-  // ---------
-
-  [
-    'pattern' => '/reg',
-    'action'  => function() {
-      Config::set("low-energy-mode", false);
-      return site()->visit(page("home"));
-    }
-  ],
-
-  [
-    'pattern' => '/reg/(:all)',
-    'action'  => function($uid) {
-      Config::set("low-energy-mode", false);
-      $page = page($uid);
-      if (!$page) $page = site()->errorPage();
-      return site()->visit($page);
-    }
-  ],
-
-  // when no mode is specified
-  // -------------------------
-
-  [
-    'pattern' => '/(:all)',
-    'action'  => function($uid) {
-      $low = Config::get("low-energy-mode");
-      $base = $low ? "/low/" : "/reg/";
-      go($base . $uid);
-    }
-  ],
-  
-
-
-
-]; 
-
-
-
-// --- V1
-
-// return [
-//   [
-//     'pattern' => '/(:all)',
-//     'action'  => function($uid) {
-//       Config::set("low-energy-mode", false);
-//       $this->next();
-//     }
-//   ],
-  
-//   [
-//     'pattern' => '/low',
-//     'action'  => function() {
-//       Config::set("low-energy-mode", true);
-//       return site()->visit(page("home"));
-//     }
-//   ],
-
-//   [
-//     'pattern' => '/low/(:all)',
-//     'action'  => function($uid) {
-//       Config::set("low-energy-mode", true);
-//       $page = page($uid);
-//       if (!$page) $page = page('blog/' . $uid);
-//       if (!$page) $page = site()->errorPage();
-//       return site()->visit($page);
-//     }
-//   ] 
-// ]; 
+];
