@@ -1,0 +1,16 @@
+title: Default Page
+preset: page
+pages: false
+files: false
+
+options:
+  changeStatus: false
+  changeSlug: false
+  delete: false
+
+fields:
+  # text:
+  #   label: Text
+  #   type: textarea
+  #   size: large
+

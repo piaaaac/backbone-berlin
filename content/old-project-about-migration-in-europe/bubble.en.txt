@@ -1,0 +1,27 @@
+Title: Old project about migration in Europe
+
+----
+
+Bubbletitle: Hearts and minds: how europeans think and feel about immigration
+
+----
+
+Sectionitems:
+
+- 
+  sectionname: ""
+  sectiontext: |
+    Hearts and minds is a data visualization website exploring public narratives and attitudes towards refugees and other migrants in European countries.
+    
+    ```
+     _._     _,-'""`-._
+    (,-.`._,'(       |\`-/|
+        `-.-' \ )-`( , o o)
+              `-    \`_`"'-
+    ```
+    
+    Data visualization project for ODI.
+    Website: Federica Fragapane, Alex Piacentini, created with Marta Foresti and ODI. Research led by ODI’s Claire Kumar and Kerrie Holloway.
+    
+    instagram.com/federicafragapane
+    www.instagram.com/piaaaac

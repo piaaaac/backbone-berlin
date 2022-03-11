@@ -1,0 +1,74 @@
+Title: Old project number two
+
+----
+
+Bubbletitle: Old project number two
+
+----
+
+Sectionitems:
+
+- 
+  sectionname: Intro
+  sectiontext: |
+    **Project summary**
+    
+    Most of what Einstein said and did has no direct impact on what anybody reads in the Bible. Special relativity, his work in quantum mechanics, nobody even knows or cares. Where Einstein really affects the Bible is the fact that general relativity is the organizing principle for the Big Bang.
+    
+    Philosophically, the universe has really never made things in ones. The Earth is special and everything else is different? No, we've got seven other planets. The sun? No, the sun is one of those dots in the night sky. The Milky Way? No, it's one of a hundred billion galaxies. And the universe - maybe it's countless other universes.
+    
+    There is always a place I can take someone's curiosity and land where they end up enlightened when we're done. That's my challenge as an educator. No one is dumb who is curious. The people who don't ask questions remain clueless throughout their lives.
+- 
+  sectionname: Topic one
+  sectiontext: |
+    **Venus has a runaway greenhouse effect**
+    
+    I kind of want to know what happened there because we're twirling knobs here on Earth without knowing the consequences of it. Mars once had running water. It's bone dry today. Something bad happened there as well.
+    
+    If the United States commits to the goal of reaching Mars, it will almost certainly do so in reaction to the progress of other nations - as was the case with NASA, the Apollo program, and the project that became the International Space Station.
+    
+    The universe is hilarious! Like, Venus is 900 degrees. I could tell you it melts lead. But that's not as fun as saying, 'You can cook a pizza on the windowsill in nine seconds.' And next time my fans eat pizza, they're thinking of Venus!
+    
+    For me at age 11, I had a pair of binoculars and looked up to the moon, and the moon wasn't just bigger, it was better. There were mountains and valleys and craters and shadows. And it came alive.
+    
+    We didn't build the interstate system to connect New York to Los Angeles because the West Coast was a priority. No, we webbed the highways so people can go to multiple places and invent ways of doing things not thought of by the persons building the roads.
+    
+    Even with all our technology and the inventions that make modern life so much easier than it once was, it takes just one big natural disaster to wipe all that away and remind us that, here on Earth, we're still at the mercy of nature.
+    
+    The history of exploration across nations and across time is not one where nations said, 'Let's explore because it's fun.' It was, 'Let's explore so that we can claim lands for our country, so that we can open up new trade routes; let's explore so we can become more powerful.'
+- 
+  sectionname: Topic two
+  sectiontext: |
+    **Not enough books focus on how a culture responds to radically new ideas or discovery**
+    
+    Especially in the biography genre, they tend to focus on all the sordid details in the life of the person who made the discovery. I find this path to be voyeuristic but not enlightening.
+    
+    In all civilizations we've studied, all cultures that we know of across the Earth and across time have invested some kind of attempt to understanding where where, where they come from, and where they are going.
+    
+    What you need, above all else, is a love for your subject, whatever it is. You've got to be so deeply in love with your subject that when curve balls are thrown, when hurdles are put in place, you've got the energy to overcome them.
+    
+    The need to create a new taxonomy that isn't just applying to our own solar system will become so evident and apparent that something will come out of it. I'm sure of it, even if it's not tomorrow.
+    
+    I don't want to be the embarrassment of the galaxy to have had the power to deflect an asteroid, and then not and end up going extinct. We'd be the laughingstock of the aliens of the cosmos if that were the case.
+    
+    'Cosmos' wouldn't deserve its place in primetime evening network television were it not a landscape on which compelling stories were told. People, when they watch TV in the evening, want to see stories, and science simply tells the best stories.
+    
+    Do you realize that if you fall into a black hole, you will see the entire future of the Universe unfold in front of you in a matter of moments and you will emerge into another space-time created by the singularity of the black hole you just fell into?
+    
+    I'm often asked - and occasionally in an accusatory way - 'Are you atheist?' And it's like, 'You know, the only 'ist' I am is a scientist, all right?' I don't associate with movements. I'm not an 'ism.' I just - I think for myself.
+    
+    I'm often asked by parents what advice can I give them to help get kids interested in science? And I have only one bit of advice. Get out of their way. Kids are born curious. Period.
+- 
+  sectionname: Topic three
+  sectiontext: |
+    **Kids should be allowed to break stuff more often**
+    
+    That's a consequence of exploration. Exploration is what you do when you don't know what you're doing. That's what scientists do every day.
+    
+    If you're going to lead a space frontier, it has to be government; it'll never be private enterprise. Because the space frontier is dangerous, and it's expensive, and it has unquantified risks. And under those conditions, you cannot establish a capital-market evaluation of that enterprise. You can't get investors.
+    
+    If we find life out there, and it's not us, we will deem it not intelligent. But what may be equally as likely is that we find life that's vastly more intelligent than we are. If that's the case, we are putty in their hands.
+    
+    I'm constantly claimed by atheists. I find this intriguing. In fact, on my Wiki page - I didn't create the Wiki page, others did, and I'm flattered that people cared enough about my life to assemble it - and it said, 'Neil deGrasse is an atheist.'
+    
+    You have people who believe they are scientifically literate but, in fact, are not. And I don't mind if you're not scientifically literate, but just admit that to yourself, so that you'll know, and perhaps you can take a first step to try to eradicate that.
