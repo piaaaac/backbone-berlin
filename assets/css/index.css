@@ -13,11 +13,11 @@ footer, header, main, menu, nav, section, summary {
   display: block; }
 
 ::-moz-selection {
-  background: #1a1aff;
+  background: #CCFF00;
   color: black; }
 
 ::selection {
-  background: #1a1aff;
+  background: #CCFF00;
   color: black; }
 
 body:not(.user-is-tabbing) button:focus,
@@ -127,7 +127,7 @@ input:invalid, textarea:invalid {
   font-family: Arial, sans-serif;
   font-size: 34px;
   letter-spacing: 0;
-  line-height: 1.05em;
+  line-height: 1em;
   font-weight: 400;
   font-style: normal;
   font-stretch: normal; }
@@ -136,13 +136,13 @@ input:invalid, textarea:invalid {
       font-size: 34px; } }
   @media (min-width: 768px) {
     .font-sans-xl {
-      font-size: 46px; } }
+      font-size: 42px; } }
   @media (min-width: 992px) {
     .font-sans-xl {
-      font-size: 46px; } }
+      font-size: 42px; } }
   @media (min-width: 1200px) {
     .font-sans-xl {
-      font-size: 46px; } }
+      font-size: 42px; } }
 
 .font-sans-m {
   font-family: Arial, sans-serif;
@@ -191,24 +191,23 @@ h1 {
   font-family: Arial, sans-serif;
   font-size: 34px;
   letter-spacing: 0;
-  line-height: 1.05em;
+  line-height: 1em;
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  font-weight: 700;
   text-align: left; }
   @media (min-width: 576px) {
     h1 {
       font-size: 34px; } }
   @media (min-width: 768px) {
     h1 {
-      font-size: 46px; } }
+      font-size: 42px; } }
   @media (min-width: 992px) {
     h1 {
-      font-size: 46px; } }
+      font-size: 42px; } }
   @media (min-width: 1200px) {
     h1 {
-      font-size: 46px; } }
+      font-size: 42px; } }
   h1:first-of-type {
     margin-top: -0.15em; }
 
@@ -220,7 +219,8 @@ h2 {
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  font-weight: 700; }
+  font-weight: 700;
+  margin-bottom: 1em; }
   @media (min-width: 576px) {
     h2 {
       font-size: 16px; } }
@@ -242,7 +242,8 @@ h3 {
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  font-weight: 700; }
+  font-weight: 700;
+  margin-bottom: 1em; }
   @media (min-width: 576px) {
     h3 {
       font-size: 16px; } }
@@ -514,7 +515,7 @@ label {
   color: white; }
 
 .color-accent {
-  color: blue; }
+  color: #CCFF00; }
 
 .color-white-50 {
   color: rgba(255, 255, 255, 0.5); }
@@ -592,8 +593,17 @@ hr {
   border-top: 1px solid rgba(255, 255, 255, 0.3); }
 
 a {
-  color: blue;
+  color: #CCFF00;
   text-decoration: none; }
+  a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10%; }
+
+ins {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10%; }
 
 h1 a[target='_blank']::after {
   content: url("../images/arrow-blank.svg"); }
@@ -610,8 +620,9 @@ h1 a[target='_blank']::after {
     border: 1px solid black;
     padding: 0 15px;
     border-radius: 3px;
-    color: blue;
-    min-width: 100%; }
+    color: #CCFF00;
+    min-width: 100%;
+    background-color: white; }
   .styled-select::after {
     content: url("../images/arrow-d.svg");
     position: absolute;
@@ -649,7 +660,7 @@ h1 a[target='_blank']::after {
   25% {
     background-color: transparent; }
   50% {
-    background-color: yellow; }
+    background-color: #CCFF00; }
   75% {
     background-color: transparent; }
   100% {
@@ -705,7 +716,7 @@ h1 a[target='_blank']::after {
 .ascii {
   font-family: "Courier New", monospace;
   height: auto !important;
-  background-color: yellow; }
+  background-color: #CCFF00; }
 
 .line {
   z-index: 2000;
@@ -713,8 +724,8 @@ h1 a[target='_blank']::after {
   left: 0px;
   top: 0;
   bottom: 0;
-  width: 1px;
-  background-color: blue;
+  width: 2px;
+  background-color: #CCFF00;
   pointer-events: none;
   transition: transform 1500ms;
   transform: translateX(10px);
@@ -770,6 +781,7 @@ h1 a[target='_blank']::after {
         border: 1px solid black;
         border-radius: 3px;
         width: 720px;
+        width: 640px;
         max-height: 80vh;
         overflow-y: scroll;
         overflow-x: hidden;
@@ -795,14 +807,13 @@ h1 a[target='_blank']::after {
               text-decoration-thickness: 2px;
               text-underline-offset: 10%; }
         .screen .bubbles .bubble-wrapper .bubble .text {
-          text-align: justify;
           padding-right: 15px;
           padding-left: 15px; }
           .screen .bubbles .bubble-wrapper .bubble .text:first-child {
             padding-top: 15px; }
           .screen .bubbles .bubble-wrapper .bubble .text:last-child {
             padding-bottom: 15px; }
-          .screen .bubbles .bubble-wrapper .bubble .text p {
+          .screen .bubbles .bubble-wrapper .bubble .text p, .screen .bubbles .bubble-wrapper .bubble .text h3 {
             margin-left: 60px; }
         .screen .bubbles .bubble-wrapper .bubble .bubble-title {
           margin-bottom: -10px;
@@ -845,7 +856,7 @@ nav.menu-custom {
       text-decoration: underline;
       text-decoration-thickness: 2px;
       text-underline-offset: 10%;
-      color: blue; }
+      color: #CCFF00; }
 
 nav#menu-desktop {
   z-index: 6;
@@ -873,7 +884,7 @@ nav#menu-desktop {
       text-decoration: underline;
       text-decoration-thickness: 2px;
       text-underline-offset: 10%;
-      color: blue; }
+      color: #CCFF00; }
 
 nav.desktop-arrows {
   z-index: 16;
@@ -951,7 +962,7 @@ nav.menu-mobile {
         text-decoration: underline;
         text-decoration-thickness: 2px;
         text-underline-offset: 10%;
-        color: blue; }
+        color: #CCFF00; }
   nav.menu-mobile .arrow {
     position: absolute;
     top: 0;
@@ -996,6 +1007,15 @@ nav.menu-mobile {
       left: 0; }
       .footer .content-wrapper .content, .footer .content-wrapper .content * {
         display: inline-block; }
+
+span.h21 {
+  background-color: #CCFF00; }
+  @media (min-width: 768px) {
+    span.h21 {
+      background-color: rgba(204, 255, 0, 0.3); } }
+
+span.h21.selected {
+  background-color: #CCFF00; }
 
 .container-fluid {
   max-width: 940px;

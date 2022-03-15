@@ -6,6 +6,7 @@
 
 $space: 15px;
 $accent: blue;
+$accent: #CCFF00;
 $border-radius: 3px;
 $menu-h: 50px;
 $menu-mobile-h: 42px;
@@ -76,6 +77,7 @@ $menu-mobile-h: 42px;
 
 body {
   overflow-x: hidden;
+  // background-color: #ECECEC;
   width: 100vw;
   color: black;
   @include font-sans-m;
@@ -91,6 +93,13 @@ hr {
 a {
   color: $accent;
   text-decoration: none;
+  &:hover {
+    @include underline;
+  }
+}
+
+ins {
+  @include underline;
 }
 
 h1 a[target='_blank']::after {
@@ -107,8 +116,9 @@ h1 a[target='_blank']::after {
     border: 1px solid black;
     padding: 0 $space;
     border-radius: $border-radius;
-    color: blue;
+    color: $accent;
     min-width: 100%;
+    background-color: white;
   }
   &::after {
     content: url("../images/arrow-d.svg");
@@ -150,7 +160,7 @@ h1 a[target='_blank']::after {
 @keyframes highlight {
   0%  { background-color: transparent; }
   25% { background-color: transparent; }
-  50% { background-color: yellow; }
+  50% { background-color: $accent; }
   75% { background-color: transparent; }
   100%{ background-color: transparent; }
 }
@@ -197,12 +207,12 @@ h1 a[target='_blank']::after {
   font-family: "Courier New", monospace;
   // white-space: nowrap;
   height: auto !important;
-  background-color: yellow;
+  background-color: $accent;
 }
 
 .line {
   z-index: 2000;
-  position: fixed; left: 0px; top: 0; bottom: 0; width: 1px;
+  position: fixed; left: 0px; top: 0; bottom: 0; width: 2px;
   background-color: $accent;
   pointer-events: none;
   transition: transform 1500ms;
@@ -260,6 +270,7 @@ h1 a[target='_blank']::after {
         border: 1px solid black;
         border-radius: $border-radius;
         width: 720px;
+        width: 640px;
 
         @include media-breakpoint-down(md) {
           width: 640px;
@@ -286,12 +297,12 @@ h1 a[target='_blank']::after {
           }
         }
         .text {
-          text-align: justify;
+          // text-align: justify;
           padding-right: $space;
           padding-left: $space;
           &:first-child { padding-top: $space; }
           &:last-child { padding-bottom: $space; }
-          p { margin-left: 60px; }
+          p, h3 { margin-left: 60px; }
         }
         .bubble-title {
           margin-bottom: -10px;
@@ -494,6 +505,18 @@ nav.menu-mobile {
     } 
   }
 }
+
+// ------------------------------------------------------------------------
+// Sessions 21
+// ------------------------------------------------------------------------
+
+span.h21 {
+  background-color: $accent; 
+  @include media-breakpoint-up(md) {
+    background-color: rgba($accent, 0.3);
+  }  
+}
+span.h21.selected { background-color: $accent; }
 
 // ------------------------------------------------------------------------
 // Layout

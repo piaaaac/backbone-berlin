@@ -2,13 +2,11 @@
 <svg width="28px" height="29px" viewBox="0 0 28 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>arrow-blank</title>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="assets" transform="translate(-323.000000, -322.000000)" stroke="#0030FF">
-            <g id="Group-2" transform="translate(333.000000, 326.520679)">
-                <g id="Group-5" transform="translate(0.000000, 0.000000)">
-                    <polyline id="Line-2" points="13.363961 6.62285359 13.363961 0.238851421 6.97995886 0.238851421"></polyline>
-                    <polyline id="Line-2-Copy" points="3.04242598 5.70613622e-15 4.79820194e-12 6.99446347e-14 0 13.6028125 13.363961 13.6028125 13.363961 10.5603865"></polyline>
-                    <line x1="13.363961" y1="0.238851421" x2="3.69868146" y2="9.90413099" id="Line-2"></line>
-                </g>
+        <g id="assets" transform="translate(-593.000000, -322.000000)" stroke="#CCFF00">
+            <g id="Group-5" transform="translate(603.000000, 326.520679)">
+                <polyline id="Line-2" points="13.363961 6.62285359 13.363961 0.238851421 6.97995886 0.238851421"></polyline>
+                <polyline id="Line-2-Copy" points="3.04242598 5.70613622e-15 4.79820194e-12 6.99446347e-14 0 13.6028125 13.363961 13.6028125 13.363961 10.5603865"></polyline>
+                <line x1="13.363961" y1="0.238851421" x2="3.69868146" y2="9.90413099" id="Line-2"></line>
             </g>
         </g>
     </g>

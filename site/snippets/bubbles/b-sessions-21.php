@@ -19,11 +19,6 @@ $words = $site->sessions21_tags()->toStructure()->toArray(function ($item) { ret
 
 ?>
 
-<style>
-  span.h { background-color: yellow; }
-  span.h.selected { background-color: orange; }
-</style>
-
 <div class="bubble" data-bubble-id="<?= $id ?>" data-menu-context="<?= $menuContext ?>">
 
   <?php if ($bubble->bubbleTitle()->isNotEmpty()): ?>
@@ -91,7 +86,7 @@ $("#sessions-21-next").click(function (value) { highlight("next"); });
 
 function highlight (direction) {
 
-  var elements = $(cont21).find("span.h").removeClass("selected").toArray();
+  var elements = $(cont21).find("span.h21").removeClass("selected").toArray();
 
   if (!elements.length) {
     console.log("alert 32598060 - no items");
@@ -129,7 +124,7 @@ function search (container, txt) {
   }
 
   // clean
-  $(container).find("span.h").each(function (i, e) {
+  $(container).find("span.h21").each(function (i, e) {
     var str = $(e).html();
     console.log(this)
     $(this).replaceWith(document.createTextNode(str))
@@ -141,11 +136,11 @@ function search (container, txt) {
     var innerHTML = $(container).html();
 
     // v2
-    innerHTML = innerHTML.split(txt).join("<span class='h'>"+ txt +"</span>");
+    innerHTML = innerHTML.split(txt).join("<span class='h21'>"+ txt +"</span>");
     
     // v1
     // via https://stackoverflow.com/a/8644513/2501713
-    // innerHTML = innerHTML.replace(new RegExp(txt, "g"), "<span class='h' style='background-color: yellow;'>$1</span>");
+    // innerHTML = innerHTML.replace(new RegExp(txt, "g"), "<span class='h21' style='background-color: yellow;'>$1</span>");
     
     $(container).html(innerHTML);
     $("#sessions-21-arrows .single-arrow").removeClass("d-none");
