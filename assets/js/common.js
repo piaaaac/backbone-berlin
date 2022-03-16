@@ -98,7 +98,7 @@ $("a[data-submenu-target]").click(function () {
 
 $("a[target='_blank']").click(function () {
   console.log(this.href)
-  popupCenter(this.href, "BB::Archive", window.innerWidth*0.6, window.innerHeight*0.7);
+  popupCenter(this.href, "BB::Archive", window.innerWidth*0.6, Math.max(window.innerHeight*0.7, 800));
   return false;
 });
 
