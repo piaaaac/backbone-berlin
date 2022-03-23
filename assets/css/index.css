@@ -17,12 +17,12 @@ footer, header, main, menu, nav, section, summary {
 }
 
 ::-moz-selection {
-  background: #CCFF00;
+  background: #AAFF00;
   color: black;
 }
 
 ::selection {
-  background: #CCFF00;
+  background: #AAFF00;
   color: black;
 }
 
@@ -679,7 +679,7 @@ label .text {
 }
 
 .color-accent {
-  color: #CCFF00;
+  color: #AAFF00;
 }
 
 .color-white-50 {
@@ -784,7 +784,7 @@ hr {
 }
 
 a {
-  color: #CCFF00;
+  color: #AAFF00;
   text-decoration: none;
 }
 a:hover {
@@ -816,7 +816,7 @@ h1 a[target=_blank]::after {
   border: 1px solid black;
   padding: 0 15px;
   border-radius: 3px;
-  color: #CCFF00;
+  color: #AAFF00;
   min-width: 100%;
   background-color: white;
 }
@@ -888,7 +888,7 @@ h1 a[target=_blank]::after {
     background-color: transparent;
   }
   50% {
-    background-color: #CCFF00;
+    background-color: #AAFF00;
   }
   75% {
     background-color: transparent;
@@ -905,7 +905,7 @@ h1 a[target=_blank]::after {
     background-color: transparent;
   }
   50% {
-    background-color: #CCFF00;
+    background-color: #AAFF00;
   }
   75% {
     background-color: transparent;
@@ -1012,7 +1012,7 @@ h1 a[target=_blank]::after {
 .ascii {
   font-family: "Courier New", monospace;
   height: auto !important;
-  background-color: #CCFF00;
+  background-color: #AAFF00;
 }
 
 .line {
@@ -1022,7 +1022,7 @@ h1 a[target=_blank]::after {
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color: #CCFF00;
+  background-color: #AAFF00;
   pointer-events: none;
   -webkit-transition: -webkit-transform 1500ms;
   transition: -webkit-transform 1500ms;
@@ -1236,7 +1236,7 @@ nav.menu-custom a.active, nav.menu-custom a:hover {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 10%;
-  color: #CCFF00;
+  color: #AAFF00;
 }
 
 nav#menu-desktop {
@@ -1280,7 +1280,7 @@ nav#menu-desktop a.menu-item.active, nav#menu-desktop a.menu-item.active-lang, n
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 10%;
-  color: #CCFF00;
+  color: #AAFF00;
 }
 
 nav.desktop-arrows {
@@ -1399,7 +1399,7 @@ nav.menu-mobile .items a.menu-item.active, nav.menu-mobile .items a.menu-item.ac
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 10%;
-  color: #CCFF00;
+  color: #AAFF00;
 }
 nav.menu-mobile .arrow {
   position: absolute;
@@ -1466,16 +1466,16 @@ nav.menu-mobile.open .items a.menu-item {
 }
 
 span.h21 {
-  background-color: #CCFF00;
+  background-color: #AAFF00;
 }
 @media (min-width: 768px) {
   span.h21 {
-    background-color: rgba(204, 255, 0, 0.3);
+    background-color: rgba(170, 255, 0, 0.3);
   }
 }
 
 span.h21.selected {
-  background-color: #CCFF00;
+  background-color: #AAFF00;
 }
 
 .container-fluid {
