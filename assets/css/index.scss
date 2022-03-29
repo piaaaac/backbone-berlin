@@ -119,6 +119,7 @@ h1 a[target='_blank']::after {
     padding: 0 $space;
     border-radius: $border-radius;
     color: $accent;
+    font-weight: 700;
     min-width: 100%;
     background-color: white;
   }
@@ -299,6 +300,7 @@ h1 a[target='_blank']::after {
           }
         }
         .text {
+          a { font-weight: 700;}
           // text-align: justify;
           padding-right: $space;
           padding-left: $space;

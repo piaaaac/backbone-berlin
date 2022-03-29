@@ -817,6 +817,7 @@ h1 a[target=_blank]::after {
   padding: 0 15px;
   border-radius: 3px;
   color: #AAFF00;
+  font-weight: 700;
   min-width: 100%;
   background-color: white;
 }
@@ -1163,6 +1164,9 @@ h1 a[target=_blank]::after {
 .screen .bubbles .bubble-wrapper .bubble .text {
   padding-right: 15px;
   padding-left: 15px;
+}
+.screen .bubbles .bubble-wrapper .bubble .text a {
+  font-weight: 700;
 }
 .screen .bubbles .bubble-wrapper .bubble .text:first-child {
   padding-top: 15px;
