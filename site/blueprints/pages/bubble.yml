@@ -1,6 +1,12 @@
 title: Bubble
 preset: page
 pages: false
+icon: grid-full
+
+options:
+  # preview: "{{ page.parent.url }}/#{{ page.slug }}"
+  preview: "{{ page.singleurl }}"
+
 fields:
 
   # v1

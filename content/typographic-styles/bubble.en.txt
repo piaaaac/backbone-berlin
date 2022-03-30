@@ -1,0 +1,152 @@
+Title: Typographic styles
+
+----
+
+Bubbletitle: 
+
+----
+
+Sectionitems:
+
+- 
+  sectionname: Headings
+  sectiontext: |
+    <aside><code># Heading 1</code></aside>
+    <br />
+    
+    # Heading 1
+    Heading 1 has **large text**, **no indentation** and **vertical spacing** around it.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed turpis sed ipsum vehicula bibendum imperdiet in orci. In vel vestibulum nisi. Donec sagittis nunc id erat aliquam blandit. Ut in sapien magna.
+    
+    <aside><code>## Heading 2</code></aside>
+    <br />
+    
+    ## Heading 2
+    Heading 2 has **no indentation** and **vertical spacing** around it.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed turpis sed ipsum vehicula bibendum imperdiet in orci. In vel vestibulum nisi. Donec sagittis nunc id erat aliquam blandit. Ut in sapien magna.
+    
+    <aside><code>### Heading 3</code></aside>
+    <br />
+    
+    ### Heading 3
+    Heading 3 has **no indentation** and **no vertical spacing** around it.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed turpis sed ipsum vehicula bibendum imperdiet in orci. In vel vestibulum nisi. Donec sagittis nunc id erat aliquam blandit. Ut in sapien magna.
+    
+    <aside><code>#### Heading 4</code></aside>
+    <br />
+    
+    #### Heading 4
+    Heading 4 has **indentation** and **vertical spacing** around it.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed turpis sed ipsum vehicula bibendum imperdiet in orci. In vel vestibulum nisi. Donec sagittis nunc id erat aliquam blandit. Ut in sapien magna.
+    
+    <aside><code>##### Heading 5</code></aside>
+    <br />
+    
+    ##### Heading 5
+    Heading 5 has **indentation** and **no vertical spacing** around it.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed turpis sed ipsum vehicula bibendum imperdiet in orci. In vel vestibulum nisi. Donec sagittis nunc id erat aliquam blandit. Ut in sapien magna.
+    
+    <aside><code>###### Heading 6</code></aside>
+    <br />
+    
+    ###### Heading 6
+    Heading 6 exists but doesn't have much sense here. It looks like a normal paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed turpis sed ipsum vehicula bibendum imperdiet in orci. In vel vestibulum nisi. Donec sagittis nunc id erat aliquam blandit. Ut in sapien magna.
+- 
+  sectionname: Text
+  sectiontext: |
+    <aside><code>&#60;ins>underlined text&#60;/ins></code></aside>
+    <br />
+    
+    Here is some <ins>underlined text</ins>.
+    
+    <aside><code>**bold text**</code></aside>
+    <br />
+    
+    Here is some **bold text**.
+    
+    <aside><code>*italic text*</code></aside>
+    <br />
+    
+    Here is some *italic text*.
+- 
+  sectionname: Links
+  sectiontext: |
+    <aside><code>&#40;link: https://google.com text: external page link target: _blank)</code></aside>
+    <br />
+    
+    This is an (link: https://google.com text: external page link target: _blank).
+    Adding target: _blank opens the page in a new tab.
+    
+    <aside><code>&#40;link: single/intro text: link to a single bubble)</code></aside>
+    <aside><code>&#40;link: single/projects/projectname text: link to a single bubble)</code></aside>
+    <br />
+    
+    This is a (link: single/intro text: link to a single bubble).
+    Note the page url is preceded by `single/`.
+    You can use this for archived pages.
+- 
+  sectionname: Lists
+  sectiontext: |
+    <br />
+    <aside><pre>
+    - item
+    - item
+    - item
+    </pre></aside>
+    <br />
+    
+    Unordered lists look like this
+    
+    - item
+    - item
+    - item
+    
+    <br />
+    <aside><pre>
+    1. first item
+    1. second item
+    1. third item
+    </pre></aside>
+    <br />
+    
+    Ordered lists look like this
+    
+    1. first item
+    1. second item
+    1. third item
+- 
+  sectionname: Examples
+  sectiontext: |
+    <br />
+    <pre>
+    ### Calendar element
+    #### 12/4/22, 20:30 @ &#40;link: https://example.com text: link to venue)
+     
+    Event description lorem ipsum dolor sit amet, consectetur …
+    </pre>
+    <br />
+    
+    ### Calendar element
+    #### 12/4/22, 20:30 @ (link: https://example.com text: link to venue)
+    
+    Event description lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed turpis sed ipsum vehicula bibendum imperdiet in orci. In vel vestibulum nisi. Donec sagittis nunc id erat aliquam blandit. Ut in sapien magna.
+    
+    ### Calendar element
+    #### 12/4/22, 20:30 @ (link: https://example.com text: link to venue)
+    
+    Event description lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed turpis sed ipsum vehicula bibendum imperdiet in orci. In vel vestibulum nisi. Donec sagittis nunc id erat aliquam blandit. Ut in sapien magna.
+    
+    ### Calendar element
+    #### 12/4/22, 20:30 @ (link: https://example.com text: link to venue)
+    
+    Event description lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed turpis sed ipsum vehicula bibendum imperdiet in orci. In vel vestibulum nisi. Donec sagittis nunc id erat aliquam blandit. Ut in sapien magna.
+    
+    <br />
+    <pre>
+    # 2021 &#40;link: single/old-project-two target: _blank text: Archive item…)
+    </pre>
+    <br />
+    
+    # 2021 (link: single/old-project-two target: _blank text: Archive item that links to a single bubble)
+    # 2021 (link: single/old-project-two target: _blank text: Archive item that links to a single bubble)
+    # 2021 (link: single/old-project-two target: _blank text: Archive item that links to a single bubble)

@@ -41,17 +41,32 @@ p {
 }
 h1 {
   @include font-sans-xl;
-  // font-weight: 700;
   text-align: left;
+  margin-bottom: $space;
   &:first-of-type { margin-top: -0.15em; }
+  &:last-child { margin-bottom: 0em; }
+  a { font-weight: 400 !important; }
+  a strong, strong a { font-weight: 700 !important; }
 }
-h2 { @include font-sans-m; font-weight: 700; margin-bottom: 1em; }
-h3 { @include font-sans-m; font-weight: 700; margin-bottom: 1em; }
-h4 { @include font-sans-m; }
+h2 { @include font-sans-m; font-weight: 700; margin-bottom: $space; }
+h3 { @include font-sans-m; font-weight: 700; }
+h4 { @include font-sans-m; margin-bottom: $space; }
 h5 { @include font-sans-m; }
-h6 { @include font-sans-m; }
+h6 { @include font-sans-m; margin-bottom: $space; }
 
-ul { margin-left: 90px; margin-bottom: 1em; }
+ul, ol { margin-left: 90px; margin-bottom: 1em; }
+
+code, pre {
+  background-color: rgba($accent, 0.2);
+  font-size: small;
+  color: green;
+  font-family: Monaco, Menlo, Courier, "Courier New", monospace;
+  border-radius: 3px;
+  padding: 2px 5px 3px 5px;
+}
+pre {
+  padding-bottom: 1px;
+}
 
 // -----------------------------------------------------------------------------
 // Block styles

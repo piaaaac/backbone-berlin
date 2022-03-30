@@ -7,30 +7,31 @@ Menuitems:
 - 
   menupage:
     - intro
+  menutexten: Intro
+  menutextde: Intro
   menutext: Intro
 - 
   menupage:
     - sessions-21
+  menutexten: Sessions 21
+  menutextde: Sessions 21
   menutext: Sessions 21
 - 
   menupage:
-    - projects
-  menutext: Projects
-- 
-  menupage:
-    - more-items
-  menutext: More items
+    - example-projects
+  menutexten: Example projects
+  menutextde: Beispielprojekte
 - 
   menupage:
     - calendar
+  menutexten: Calendar
+  menutextde: Kalendar
   menutext: Calendar
 - 
   menupage:
-    - archive
-  menutext: Archive
-- 
-  menupage:
     - info
+  menutexten: Info
+  menutextde: Informationen
   menutext: Info
 
 ----

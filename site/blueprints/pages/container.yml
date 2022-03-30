@@ -1,14 +1,8 @@
 title: Bubbles container
-# preset: page
-# pages: true
-#   template: bubble
-# fields: false
+icon: grid
 
-
-
-
-
-
+options:
+  preview: false
 
 columns:
   - 1/1:

@@ -1,8 +1,16 @@
-Title: Kalendar
+Title: example_Calendar
 
 ----
 
-Bubbletitle: Kalendar
+Bubbletype: bubble
+
+----
+
+Childrenbubbles: 
+
+----
+
+Bubbletitle: Calendar
 
 ----
 

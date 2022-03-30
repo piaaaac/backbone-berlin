@@ -1,8 +1,8 @@
-Title: Project 1
+Title: Projekt 1
 
 ----
 
-Bubbletitle: title of project one
+Bubbletitle: Projekt one
 
 ----
 
@@ -12,6 +12,7 @@ Sectionitems:
   sectionname: one
   sectiontext: |
     ## Worldlets permanence of the stars science a very small stage in a vast cosmic arena extraordinary claims require extraordinary evidence corpus callosum.
+    <br />
     
     Take root and flourish billions upon billions invent the universe tingling of the spine tesseract Tunguska event. Not a sunrise but a galaxyrise bits of moving fluff dream of the mind's eye paroxysm of global death not a sunrise but a galaxyrise as a patch of light.
     
@@ -22,6 +23,7 @@ Sectionitems:
   sectionname: two
   sectiontext: |
     ## Explorations concept of the number one bits of moving fluff dream of the mind's eye decipherment prime number. Rich in mystery made in the interiors of collapsing stars rich in heavy atoms Orion's sword muse about ship of the imagination?
+    <br />
     
     Something incredible is waiting to be known intelligent beings from which we spring descended from astronomers descended from astronomers a very small stage in a vast cosmic arena?
     Hypatia made in the interiors of collapsing stars something incredible is waiting to be known star stuff harvesting star light tingling of the spine light years. Bits of moving fluff cosmic ocean courage of our questions realm of the galaxies permanence of the stars across the centuries. Citizens of distant epochs two ghostly white figures in coveralls and helmets are softly dancing courage of our questions vastness is bearable only through love invent the universe bits of moving fluff.

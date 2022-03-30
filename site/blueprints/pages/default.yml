@@ -1,14 +1,10 @@
-title: Homepage
+title: Default Page
 preset: page
 pages: false
 files: false
 icon: cog
 
-options:
-  changeStatus: false
-  changeSlug: false
-  delete: false
-  preview: false
+# options: false
 
 fields:
   # text:

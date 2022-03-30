@@ -1,4 +1,4 @@
-Title: Calendar
+Title: Kalendar
 
 ----
 
@@ -10,7 +10,7 @@ Childrenbubbles:
 
 ----
 
-Bubbletitle: Calendar
+Bubbletitle: Kalendar
 
 ----
 

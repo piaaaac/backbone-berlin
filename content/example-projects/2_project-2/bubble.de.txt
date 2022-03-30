@@ -1,8 +1,8 @@
-Title: Project 2
+Title: Projekt 2
 
 ----
 
-Bubbletitle: second project
+Bubbletitle: Projekt 2
 
 ----
 

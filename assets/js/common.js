@@ -298,8 +298,12 @@ function scrollToSection (submenuTarget, bubbleId) {
   var anchorEl = $(bubbleEl).find(".anchor[data-section-id='"+ submenuTarget +"']")[0];
   if (!anchorEl) { throw "error 39725628"; }
   anchorEl.scrollIntoView(true);
-  $("[data-section-id] *").removeClass("highlight-once");
-  $(sectionEl).find("p, h1, h2, h3, h4, h5, h6").addClass("highlight-once");
+
+  $("[data-section-id]").removeClass("highlight-once");
+  $(sectionEl).addClass("highlight-once");
+
+  // $("[data-section-id] *").removeClass("highlight-once");
+  // $(sectionEl).find("p, h1, h2, h3, h4, h5, h6").addClass("highlight-once");
 }
 
 function setFooterAnimation () {

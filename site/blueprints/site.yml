@@ -4,16 +4,10 @@ unlisted: true
 tabs:
 
   tab_site:
-    label: Site
+    label: Content
     columns:
       - 1/1:
         sections:
-
-          pages:
-            type: pages
-            create:
-              - bubble
-              - container
 
           meta:
             type: fields
@@ -24,16 +18,45 @@ tabs:
                 label: Menu items
                 fields:
                   menuPage:
-                    width: 1/2
+                    width: 1/3
                     type: pages
                     min: 1
                     max: 1
-                    # translate: false
-                  menuText:
-                    width: 1/2
+                    translate: false
+                  menuTextEn:
+                    label: Text EN
+                    width: 1/3
                     type: text
+                    translate: false
+                  menuTextDe:
+                    label: Text DE
+                    width: 1/3
+                    type: text
+                    translate: false
+
+          pages:
+            type: pages
+            create:
+              - bubble
+              - container
+
+              # cookieBanner:
+              #   label: Cookie banner text
+              #   type: textarea
+              #   width: 1/2
+              
+  tab_settings:
+    label: Site settings
+    columns:
+      - 1/1:
+        sections:
+
+          meta2:
+            type: fields
+            fields:
 
               bgImages:
+                label: Background images
                 type: files
                 min: 1
                 translate: false
@@ -55,11 +78,6 @@ tabs:
                 help: "Un'immagine di 1200x630 px"
                 width: 1/2
                 translate: false
-
-              # cookieBanner:
-              #   label: Cookie banner text
-              #   type: textarea
-              #   width: 1/2
               
   tab_sessions21:
     label: Sessions 21

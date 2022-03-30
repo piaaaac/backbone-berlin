@@ -1,0 +1,25 @@
+Title: example_Archive
+
+----
+
+Bubbletitle: 
+
+----
+
+Sectionitems:
+
+- 
+  sectionname: ""
+  sectiontext: |
+    # 2021 (link: single/old-project-two target: _blank text: Vestibulum sit amet pellentesque)
+    # 2020 (link: single/old-project-about-migration-in-europe target: _blank text: Hearts and minds: how europeans think and feel about immigration)
+    # 2020 (link: single/old-project-three target: _blank text: Nulla effici)
+    # 2020 (link: single/old-project-four target: _blank text: Mauris sed turpis)
+
+----
+
+Bubbletype: bubble
+
+----
+
+Childrenbubbles: 

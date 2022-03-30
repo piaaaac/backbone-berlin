@@ -3,6 +3,9 @@ $menuItems = $site->menuItems()->toStructure();
 $menuItemsNum = $menuItems->count() + 2; // home and lang switch
 $landingBubbleId = Str::slug(page("landing")->id());
 
+$currentLang = $kirby->language()->code();
+$langTextFiled = ($currentLang === "en") ? "menuTextEn" : "menuTextDe";
+
 $containerPages = new Pages();
 foreach ($menuItems as $item) {
   $p = $item->menuPage()->toPage();
@@ -36,8 +39,8 @@ nav.menu-mobile[data-menu-context="site"].open {
 <nav id="menu-desktop" data-menu-context="site">
   <div class="wrapper">
     <p style="text-align: left; flex-grow: 1;"><a href="#" data-bubble-id="<?= $landingBubbleId ?>" data-page-id="<?= $landingBubbleId ?>" class="menu-item no-u active">Backbone Berlin</a></p>
-    <?php foreach ($menuItems as $item): 
-      $text = $item->menuText()->value();
+    <?php foreach ($menuItems as $item):       
+      $text = $item->$langTextFiled()->value();
       $p = $item->menuPage()->toPage();
       $template = $p->template()->name();
       $pageId = Str::slug($p->id());
@@ -103,7 +106,7 @@ nav.menu-mobile[data-menu-context="site"].open {
   <div class="items">
     <a href="#" data-bubble-id="<?= $landingBubbleId ?>" data-page-id="<?= $landingBubbleId ?>" class="menu-item no-u active">Backbone Berlin</a>
     <?php foreach ($menuItems as $item): 
-      $text = $item->menuText()->value();
+      $text = $item->$langTextFiled()->value();
       $p = $item->menuPage()->toPage();
       $template = $p->template()->name();
       $pageId = Str::slug($p->id());

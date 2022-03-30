@@ -3,9 +3,17 @@
 return [
 
   [
-    "pattern" => "/archived/(:any)",
+    "pattern" => "/single/(:all)",
+    // "pattern" => "/single/(:any)",
     "language" => "*",
     "action"  => function ($language, $bubblePageId) {
+
+
+      /*DEBUG*/
+      // return "<html><body>$bubblePageId</body></html>";
+      /*DEBUG*/
+
+
 
       $p = page($bubblePageId);
       
@@ -30,11 +38,16 @@ return [
     }
   ],
   [
-    "pattern" => "/archived/(:any)",
+    "pattern" => "/single/(:all)",
+    // "pattern" => "/single/(:any)",
     "action"  => function ($bubblePageId) {
 
+      /*DEBUG*/
+      // return "<html><body>No lang — $bubblePageId</body></html>";
+      /*DEBUG*/
+
       $lang = kirby()->session()->get("lang", "en");
-      $url = "/$lang/archived/$bubblePageId";
+      $url = "/$lang/single/$bubblePageId";
       go($url);
 
       // return "<html><body>$bubblePageId</body></html>";
@@ -42,7 +55,7 @@ return [
   ],
 
   // [
-  //   "pattern" => "/archived/(:any)",
+  //   "pattern" => "/single/(:any)",
   //   "action"  => function ($bubblePageId) {
 
   //     $p = page($bubblePageId);
