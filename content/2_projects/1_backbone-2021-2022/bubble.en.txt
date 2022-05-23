@@ -1,0 +1,50 @@
+Title: Backbone 2021-2022
+
+----
+
+Bubbletitle: Backbone 2021-2022
+
+----
+
+Sectionitems:
+
+- 
+  sectionname: ""
+  sectiontext: |
+    Backbone Berlin emerges as a platform in October 2021 with the launch of a 18 months pilot program structured in two parts: **Sessions** and **Support**, run in close collaboration with practitioners working independently in the field of dance, choreography and performance, with an interest and commitment to practices of self-organisation.
+    
+    In 2021-2022 hosted by Barbara Greiner and Sarah Parolin, the platform gathers: Agata Siniarska, Alice Chauchat, Angela Alves, Clement Layes, Giulia Messia, Gretchen Blegen, Ixchel Mendoza Hernandez, Jared Gradinger, Julia Rodriguez, Kasia Wolinska, Lea Moro, Louise Trueheart, Manon Parent, Maria F. Scaroni, Olympia Bukkakis, Roni Katz, Sheena McGrandles, Siegmar Zacharias and Xenia Taniko.
+    
+    The platform acknowledges each artist / practitioner as an ecology of inter-dependencies and labour structures made of collaborations. Both **Sessions** and **Support** are open to the participants own collaborators with the aim of expanding the circle of involvement as much as possible as well as empower already existing working ecologies.
+    
+    Have participated via via: Annegret Schalke, Caitlin Fisher, Laurie Young, Heather Purcell, Maya Weinberg, Tammo Walter, Tiphaine Carrère Loquet, Etaïnn Zwer, more tbc.
+- 
+  sectionname: Sessions
+  sectiontext: |
+    The Backbone Sessions is a serie of invitations to gather in order to investigate what sustainability and long term support of artistic practice can look like within the dance scene, going beyond the model of the classical dance company. What are alternative models of organisation, long term support, production support, mutualisation and solidarity? How the scene can re-organise in a more inclusive, less fragmented, more empowered way?
+    How can we, as a community, share resources, risk, trajectories, co-finance each others work, commit to a deeper, healthier inter-dependency, use it to grow and feed our peers, the scene, the wider community? An active network of arts practitioners will design a first, rough, map of possibilities and future grounding work directions for the scene, the institutions as well as the funding bodies.
+    
+    The platform  organise and coordinate  four meetings dedicated to questioning, analysing and discussing models of organising long-term support and production in the dance field.
+    
+    The four chapters of analysis proposed are:
+    
+    - Individual Practices (how do we work, what do we need, how do we plan, how do we activate)
+    - Ethics (what are the values and politics leading our working environment, how to we account for fairness, asymmetries, ecology and sustainability)
+    - Governance (how information flows, who is accountable, hierarchies, how do we come to decisions, how do we share, if we share, responsibility, how do we evaluate our actions)
+    - Resources (bodies, finances, time, knowledge, tools)
+    
+    *>>> (link: https://backbone-berlin.org/en/single/sessions-notes-2022 text: SESSIONS DOCUMENTATION) <<<*
+- 
+  sectionname: Support
+  sectiontext: >
+    With more than ten years of experience
+    in the field, the hosts of Backbone
+    Berlin will offer training and mentoring
+    to the fellow art practitioners involved
+    in the project and their networks.
+    Backbone Berlin offers support and
+    hands-on solutions finding dedicated to
+    analysing together the sustainability of
+    projects, their international
+    development, touring, financial
+    viability and long term trajectory.

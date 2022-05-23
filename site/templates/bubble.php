@@ -8,7 +8,7 @@ $id = Str::slug($page->id());
 
 $bubbleType = "b-default";
 
-if ($id === "sessions-21") { $bubbleType = "b-sessions-21"; }
+if ($id === "sessions-2021") { $bubbleType = "b-sessions-21"; }
 
 echo snippet("bubbles/$bubbleType", ["bubble" => $page]);
 

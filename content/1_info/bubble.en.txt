@@ -1,0 +1,126 @@
+Title: Info
+
+----
+
+Bubbletitle: Info
+
+----
+
+Sectionitems:
+
+- 
+  sectionname: About
+  sectiontext: |
+    **About**
+    
+    Backbone Berlin is a platform that aims to facilitate and foster long term support to artistic practice within the independent dance scene of Berlin and beyond as well as to question current issues related to precarity of artistic work, commoning of resources, mutualisation, alternative models of long term development, ecology and sustainability of practices within the field of dance and its wider community. Backbone Berlin is currently hosted by independent performance and visual art producers Barbara Greiner and Sarah Parolin.
+- 
+  sectionname: People
+  sectiontext: |
+    **People**
+    
+    During 2021-2022 Backbone is hosted by Barbara Greiner and Sarah Parolin, and joined by practitioners: (link: http://cargocollective.com/agatasiniarska text: Agata Siniarska target:_blank), (link: https://www.alicechauchat.net/ text: Alice Chauchat target:_blank), (link: http://angelaalves.de/ text: Angela Alves target:_blank), (link: https://clementlayes.com/ text: Clement Layes target:_blank), Giulia Messia, (link: https://www.gretchenblegen.xyz/ text: Gretchen Blegen target:_blank), (link: https://www.ixchelmendoza.com/ text: Ixchel Mendoza Hernandez target:_blank), (link: https://www.jaredgradinger.com/ text: Jared Gradinger target:_blank), Julia Rodriguez, (link: http://www.danceisaweapon.com/ text: Kasia Wolinska target:_blank), (link: https://www.leamoro.com/ text: Lea Moro target:_blank), (link: https://www.louisetrueheart.com/ text: Louise Trueheart target:_blank), (link: http://manonparent.com/ text: Manon Parent target:_blank), Maria F. Scaroni, (link: https://olympiabukkakis.com/ text: Olympia Bukkakis target:_blank), (link: https://www.ronikatz.net/ text: Roni Katz target:_blank), (link: http://www.sheenamcgrandles.com/ text: Sheena McGrandles target:_blank), (link: https://siegmarzacharias.com/ text: Siegmar Zacharias target:_blank), Xenia Taniko.
+- 
+  sectionname: Credits
+  sectiontext: |
+    **Credits**
+    
+    Supported by: DIEHL+RITTER/TANZPAKT RECONNECT which is funded by the German Federal Government Commissioner for Culture and the Media as part of the NEUSTART KULTUR initiative, (link: https://www.tanzfabrik-berlin.de/ text: Tanzfabrik Berlin target:_blank) and (link: https://www.spinspin.be/ text: SPIN VZW target:_blank)
+    
+    In partnership with: (link: https://www.radialsystem.de/ text: Radialsystem target:_blank) and (link: https://sophiensaele.com/de text: Sophiensaele target:_blank)
+    
+    Website: (link: https://annamagni.com/ text: Anna Magni target:_blank), (link: https://alexpiacentini.com text: Alex Piacentini target:_blank)
+    
+    Note Taking: (link: https://etainnzwer.tumblr.com text: Etaïnn Zwer target:_blank)
+- 
+  sectionname: Imprint
+  sectiontext: |
+    **Imprint**
+    
+    Backbone Berlin GbR
+    (Barbara Greiner, Sarah Parolin)
+    Schwartzkopffstr. 19
+    10115 Berlin
+    Germany
+    
+    Responsible for content according to §5TMG/ §55 RStV: Barbara Greiner, Sarah Parolin
+    
+    **Data protection declaration**
+    
+    **1. name and contact details of the controller and the company data protection officer**
+    
+    This data protection information applies to data processing by:
+    
+    Backbone Berlin GbR
+    (Barbara Greiner, Sarah Parolin)
+    Schwartzkopffstr. 19
+    10115 Berlin
+    Germany
+    
+    hello [at] backbone-berlin.org
+    
+    **2. collection and storage of personal data as well as type and purpose of their use**
+    
+    When you visit our backbone-berlin.org website, the browser used on your device automatically sends information to the server on our website. This information is temporarily stored in a so-called log file. The following information is recorded without your intervention and stored until it is automatically deleted:
+    
+    - IP address of the requesting computer,
+    - Date and time of access,
+    - Name and URL of the retrieved file,
+    - Website from which access is made (referrer URL),
+    - the browser used and, if applicable, the operating system of your computer as well as the name of your access provider.
+    
+    The mentioned data will be processed by us for the following purposes:
+    
+    - Ensuring a smooth connection of the website,
+    - Ensure comfortable use of our website,
+    - evaluation of system security and stability as well as
+    - for other administrative purposes.
+    
+    The legal basis for data processing is Art. 6 para. 1 sentence 1 lit. f DSGVO. Our legitimate interest follows from the purposes listed above for data collection. Under no circumstances do we use the data collected for the purpose of drawing conclusions about you personally. In addition, we use cookies and analysis services when you visit our website. You will find more detailed explanations under sections 4 and 5 of this data protection declaration.
+    
+    **3. passing on of data**
+    
+    Your personal data will not be transmitted to third parties for purposes other than those listed below. We will only pass on your personal data to third parties if:
+    
+    - you have given your express consent pursuant to Art. 6 para. 1 sentence 1 lit. a DSGVO,
+    - the disclosure pursuant to Art. 6 para. 1 sentence 1 f DSGVO is necessary to assert, exercise or defend legal claims and there is no reason to assume that you have an overriding interest worthy of protection in not disclosing your data,
+    - in the event that a legal obligation exists for the transfer pursuant to Art. 6 para. 1 sentence 1 lit. c DSGVO, and
+    - this is legally permissible and is necessary for the processing of contractual relationships with you in accordance with Art. 6 para. 1 sentence 1 lit. b DSGVO.
+    
+    **4 Cookies**
+    
+    We use cookies on our site. These are small files that your browser automatically creates and that are stored on your device (laptop, tablet, smartphone, etc.) when you visit our site. Cookies do no damage to your end device, do not contain viruses, Trojans or other malware. Information is stored in the cookie that results in each case in connection with the specifically used terminal device. However, this does not mean that we immediately become aware of your identity. The use of cookies serves on the one hand to make the use of our offer more pleasant for you. For example, we use so-called session cookies to recognize that you have already visited individual pages of our website. These will be deleted automatically after leaving our site. In addition, we also use temporary cookies that are stored on your end device for a specified period of time to optimize user-friendliness. If you visit our site again to use our services, it will automatically recognize that you have already been with us and what entries and settings you have made so that you do not have to enter them again. On the other hand, we use cookies to statistically record the use of our website and to evaluate it for you for the purpose of optimising our offer (see Section 5). These cookies enable us to automatically recognize when you return to our site that you have already been with us. These cookies are automatically deleted after a defined period of time. The data processed by cookies is required for the aforementioned purposes in order to protect our legitimate interests and those of third parties pursuant to Art. 6 Para. 1 S. 1 lit. f DSGVO.
+    
+    Most browsers automatically accept cookies. However, you can configure your browser so that no cookies are stored on your computer or a message always appears before a new cookie is created. However, the complete deactivation of cookies can lead to the fact that you cannot use all functions of our website.
+    
+    **5. rights of the persons concerned**
+    
+    You have the right:
+    
+    - to request information about your personal data processed by us in accordance with Art. 15 DSGVO. In particular, you may request information about the purposes of processing, the category of personal data, the categories of recipients to whom your data have been or will be disclosed, the planned storage period, the existence of a right to rectification, deletion, restriction of processing or objection, the existence of a right of appeal, the origin of your data, if these have not been collected by us, and the existence of automated decision-making including profiling and, if applicable, meaningful information on their details;
+    - to immediately request the correction of incorrect or complete personal data stored by us in accordance with Art. 16 DSGVO;
+    - to request the deletion of your personal data stored by us in accordance with Art. 17 DSGVO, unless the processing is necessary to exercise the right to freedom of expression and information, to fulfil a legal obligation, for reasons of public interest or to assert, exercise or defend legal claims;
+    - pursuant to Art. 18 DSGVO, to restrict the processing of your personal data if you dispute the accuracy of the data, if the processing is unlawful but you refuse to delete the data and we no longer need the data, but if you need it to assert, exercise or defend legal claims or if you have filed an objection to the processing pursuant to Art. 21 DSGVO;
+    - pursuant to Art. 20 DSGVO, to receive your personal data that you have provided to us in a structured, current and machine-readable format or to request its transfer to another person responsible;
+    - in accordance with Art. 7 para. 3 DSGVO, to revoke your consent to us at any time. As a result, we are no longer allowed to continue processing data based on this consent in the future and
+    - to complain to a supervisory authority pursuant to Art. 77 DSGVO. As a rule, you can contact the supervisory authority of your usual place of residence or workplace or our office.
+    
+    **6. right of objection**
+    
+    If your personal data are processed on the basis of legitimate interests pursuant to Art. 6 para. 1 sentence 1 letter f DSGVO, you have the right to object to the processing of your personal data pursuant to Art. 21 DSGVO, provided that there are reasons for this which arise from your particular situation or the objection is directed against direct advertising. In the latter case, you have a general right of objection, which we will implement without specifying a particular situation. If you would like to make use of your right of revocation or objection, an e-mail to hello(at)backbone-berlin.org is sufficient.
+    
+    **7 Data security**
+    
+    We use the most common SSL (Secure Socket Layer) method in connection with the highest level of encryption supported by your browser. Usually this is a 256 bit encryption. If your browser does not support 256-bit encryption, we use 128-bit v3 technology instead. Whether a single page of our website is transmitted in encrypted form is indicated by the closed display of the key or lock symbol in the lower status bar of your browser. We also use suitable technical and organisational security measures to protect your data against accidental or intentional manipulation, partial or complete loss, destruction or unauthorised access by third parties. Our security measures are continuously improved in line with technological developments.
+    
+    **8 Up-to-dateness and amendment of this data protection declaration**
+    
+    This data protection declaration is currently valid and has the status May 2018. due to the further development of our website and offers above or due to changed legal or official requirements, it may become necessary to change this data protection declaration.
+
+----
+
+Bubbletype: bubble
+
+----
+
+Childrenbubbles: 

@@ -1,0 +1,32 @@
+Title: Calendar
+
+----
+
+Bubbletitle: Calendar
+
+----
+
+Sectionitems:
+
+- 
+  sectionname: ""
+  sectiontext: |
+    ### Session #1
+    #### 19, 20, 21/4/22, @ (link: https://www.radialsystem.de/en/ text: Radialsystem)
+    
+    ### Session #2
+    #### 23, 24, 25/5/22, @ (link: https://www.tanzfabrik-berlin.de/ text: Tanzfabrik)
+    
+    ### Session #3
+    #### 7, 8, 9/9/22, @ (link: https://www.tanzfabrik-berlin.de/ text: Tanzfabrik)
+    
+    ### Session #4
+    #### 10, 11/12/22, @ (link: https://sophiensaele.com/en text: Sophiensaele)
+
+----
+
+Bubbletype: bubble
+
+----
+
+Childrenbubbles: 

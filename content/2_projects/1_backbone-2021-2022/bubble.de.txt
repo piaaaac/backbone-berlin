@@ -1,0 +1,40 @@
+Title: Backbone 2021-2022
+
+----
+
+Bubbletitle: Backbone 2021-2022
+
+----
+
+Sectionitems:
+
+- 
+  sectionname: ""
+  sectiontext: |
+    Backbone Berlin entsteht als Plattform im Oktober 2021 mit dem Start eines 15-monatigen Pilotprogramms, das aus zwei Säulen besteht: Sessions und Support. Beide Säulen werden in enger Zusammenarbeit mit unabhängig arbeitenden Kunstschaffenden aus dem Bereich Tanz, Choreographie und Performance, die ein Interesse und Engagement für Praktiken der Selbstorganisation mitbringen, durchgeführt und entwickelt.
+    
+    Im Zeitraum 2021-2022 versammelt die Plattform unter Koordination von Barbara Greiner und Sarah Parolin: Agata Siniarska, Alice Chauchat, Angela Alves, Clement Layes, Giulia Messia, Gretchen Belgen, Ixchel Mendoza Hernandez, Jared Gradinger, Julia Rodriguez, Kasia Wolinska, Lea Moro, Louise Trueheart, Manon Parent, Maria F. Scaroni, Olympia Bukkakis, Roni Katz, Sheena McGrandles, Siegmar Zacharias und Xenia Taniko.
+    
+    Die Plattform erkennt alle Beteiligten, auch wenn sie unabhängig und freiberuflich arbeiten, als ein bereits bestehendes Ökosystem von Co-Abhängigkeiten und eine auf Kollaborationen aufbauende Arbeitsstruktur an. Sowohl die Sessions als auch der Support sind offen für die eigenen Mitarbeiter*innen der Teilnehmenden mit dem Ziel, den Kreis der Beteiligung so weit wie möglich auszudehnen und bereits bestehende Arbeitsökologien zu stärken. Teilgenommen haben via via: Annegret Schalke, Caitlin Fisher, Laurie Young, Heather Purcell, Maya Weinberg, Tammo Walter, Tiphaine Carrère Loquet, Etaïnn Zwer, weitere tbc.
+- 
+  sectionname: Sessions
+  sectiontext: |
+    **Sessions**
+    
+    Die Backbone Sessions sind eine Reihe von Einladungen, sich zu versammeln und zu untersuchen, wie Nachhaltigkeit und langfristige Unterstützung der künstlerischen Praxis in der Tanzszene aussehen kann, die über das Modell der klassischen Tanzkompanie hinausgeht. Was sind alternative Modelle der Organisation, langfristigen Unterstützung, Kooperation in der Produktionsarbeit, Vergemeinschaftung und Solidarität? Wie kann sich die Szene integrativer, weniger zersplittert und selbstermächtigend neu organisieren? Wie können wir als Gemeinschaft Ressourcen, Risiken und Entwicklungen teilen, unsere Arbeit gegenseitig ko-finanzieren, uns zu einer tieferen, gesünderen gegenseitigen Abhängigkeit verpflichten und diese nutzen, um zu wachsen und damit Mitstreiter:innen, die Szene und die breitere Gemeinschaft zu befähigen?
+    Ein aktives Netzwerk von Kunstschaffenden wird eine erste grobe Skizze an Möglichkeiten und zukünftigen Arbeitsmodellen für die Szene, Institutionen und Fördergeber:innen entwerfen.
+    
+    Die Plattform organisiert und koordiniert vier Treffen, die sich mit Fragen, Analysen und Diskussionen von Organisationsmodellen langfristiger Zusammenarbeit und Produktion befassen.
+    
+    Die vier vorgeschlagenen Kapitel sind:
+    
+    - Individuelle Praxis (wie arbeiten wir; was brauchen wir; wie planen wir; wie mobilisieren wir)
+    - Ethik (was sind die Werte und die Strategien, die unser Arbeitsumfeld leiten; wie berücksichtigen wir Fairness, Asymmetrien, Zusammenhänge und Nachhaltigkeit)
+    - Entscheidungs-/ Leitungsmodelle (wie fließt Information; wer ist verantwortlich; welche Hierarchien sind im Spiel; wie kommen wir zu Entscheidungen; wie teilen wir, wenn wir Verantwortung teilen; wie bewerten wir unser Handeln)
+    - Ressourcen (Körper; Geld; Zeit; Wissen; Werkzeuge)
+- 
+  sectionname: Support
+  sectiontext: |
+    **Support**
+    
+    Die Koordinator:innen von Backbone Berlin verfügen über mehr als zehn Jahre Erfahrung in diesem Bereich und werden den am Projekt beteiligten Kunstschaffenden und ihren Netzwerken individuelles Training und Mentoring anbieten. Backbone Berlin bietet Hilfestellung und praktische Lösungen für die gemeinsame Analyse der Nachhaltigkeit von Projekten, ihrer internationalen Entwicklung, ihrer Tourfähigkeit, ihrer finanziellen Tragfähigkeit und ihrer langfristigen Ausrichtung.

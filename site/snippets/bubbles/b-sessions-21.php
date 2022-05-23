@@ -65,7 +65,7 @@ var searchState = {
 
 $(document).ready(function () {
   cont21 = $("section.session-21-text")[0];
-  bubble = $(".bubble[data-bubble-id='sessions-21']")[0];
+  bubble = $(".bubble[data-bubble-id='sessions-2021']")[0];
 });
 
 // ------------------------------------------
@@ -88,7 +88,7 @@ function highlight (direction) {
 
   var elements = $(cont21).find("span.h21").removeClass("selected").toArray();
 
-  if (!elements.length) {
+  if (elements.length === 0) {
     console.log("alert 32598060 - no items");
     return false;
   }
@@ -108,8 +108,8 @@ function highlight (direction) {
   else { throw "error 23509856"; }
 
   var el = elements[searchState.index];
-  const yOffset = -190; 
-  const y = el.getBoundingClientRect().top + bubble.scrollTop + yOffset;
+  var yOffset = -190; 
+  var y = el.getBoundingClientRect().top + bubble.scrollTop + yOffset;
   console.log(y)
   bubble.scrollTo({top: y, behavior: 'smooth'});
   // el.scrollIntoView();
@@ -135,13 +135,9 @@ function search (container, txt) {
 
     var innerHTML = $(container).html();
 
-    // v2
-    innerHTML = innerHTML.split(txt).join("<span class='h21'>"+ txt +"</span>");
-    
-    // v1
-    // via https://stackoverflow.com/a/8644513/2501713
-    // innerHTML = innerHTML.replace(new RegExp(txt, "g"), "<span class='h21' style='background-color: yellow;'>$1</span>");
-    
+    // via https://stackoverflow.com/a/38480168/2501713
+    var regEscape = function (v) { return v.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&'); }
+    innerHTML = innerHTML.replace(new RegExp(regEscape(txt), 'gi'), "<span class='h21'>$&</span>"); 
     $(container).html(innerHTML);
     $("#sessions-21-arrows .single-arrow").removeClass("d-none");
     highlight(0);
@@ -149,25 +145,7 @@ function search (container, txt) {
   }
 }
 
-
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

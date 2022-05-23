@@ -1,0 +1,20 @@
+Title: Fortuna
+
+----
+
+Bubbletitle: Fortuna
+
+----
+
+Sectionitems:
+
+- 
+  sectionname: ""
+  sectiontext: |
+    Fortuna ist ein selbstorganisierter Raum und ein Gemeinschaftsort, in dem sowohl regelmäßige Workshops und Kollaborationen als auch individuelle Recherchen und performative/ sound-basierte Begegnungen verschiedener Art stattfinden. Die drei Etagen befindet sich im belebten Neuköllner Kiez in der Karl-Marx-Straße.
+    
+    Derzeit sind die Mitglieder von Fortuna Backbone Berlin, Olympia Bukkakis, Jule Flierl, Hermann Heisig, Tümay Kilincel, Thomas Proksch, Social Pleasure Center (Maria Scaroni, Heather Purcell, Cait Fisher mit ihrer Community), das TENT Collective, Anne Zacho-Søgaard und Anna Zett.
+    
+    Fortuna ist ein Raum für künstlerische und soziale Praktiken. Er hat eine bewusst offene und flexible Struktur. Der monatliche Beitrag wird nach den individuellen Bedürfnissen und Anforderungen der Mitglieder bezahlt. Die Mitglieder sind frei in der Gestaltung ihrer Projekte und der Nutzung des Raumes. Gemeinsame Arbeitsgrundlagen sind ein geteilter Kalender und ein monatliches Treffen. Das gemeinsame Verständnis der Gruppe ist eine offene, experimentelle, kollaborative, care-zentrierte und multisensorische Arbeits- und Denkweise. Öffentliche Veranstaltungen können durch den spezifischen Ansatz jedes Mitglieds organisiert und über verschiedene Kanäle in den eigenen und geteilten Kollektiven und Netzwerken verbreitet werden.
+    
+    Fortuna ist aus einer temporären Zwischennutzung im November 2021 hervorgegangen. Der Choreograf und Performer Hermann Heisig und die Produzentin Leonie Kusterer hatten das ehemalige Wettbüro angemietet, um eine Reihe von Künstler:innen und Performer:innen für eine gemeinsame Recherche zusammenzubringen. Einige der Beteiligten suchten nach Möglichkeiten, den ehemaligen Laden als Projektraum weiterzuentwickeln.
